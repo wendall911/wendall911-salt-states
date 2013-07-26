@@ -1,0 +1,24 @@
+--- panel.js.orig	2013-01-23 16:50:02.137569691 -0800
++++ panel.js	2013-01-23 16:50:35.438687331 -0800
+@@ -897,7 +897,7 @@ const PANEL_ITEM_IMPLEMENTATIONS = {
+     'activities': ActivitiesButton,
+     'appMenu': AppMenuButton,
+     'dateMenu': imports.ui.dateMenu.DateMenuButton,
+-    'a11y': imports.ui.status.accessibility.ATIndicator,
++//    'a11y': imports.ui.status.accessibility.ATIndicator,
+     'volume': imports.ui.status.volume.Indicator,
+     'battery': imports.ui.status.power.Indicator,
+     'lockScreen': imports.ui.status.lockScreenMenu.Indicator,
+@@ -906,9 +906,9 @@ const PANEL_ITEM_IMPLEMENTATIONS = {
+     'userMenu': imports.ui.userMenu.UserMenuButton
+ };
+ 
+-if (Config.HAVE_BLUETOOTH)
+-    PANEL_ITEM_IMPLEMENTATIONS['bluetooth'] =
+-        imports.ui.status.bluetooth.Indicator;
++//if (Config.HAVE_BLUETOOTH)
++//    PANEL_ITEM_IMPLEMENTATIONS['bluetooth'] =
++//        imports.ui.status.bluetooth.Indicator;
+ 
+ try {
+     PANEL_ITEM_IMPLEMENTATIONS['network'] =

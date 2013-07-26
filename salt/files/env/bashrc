@@ -1,0 +1,100 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific aliases and functions
+function rgrep() {
+    grep -IR --exclude-from=$HOME/.rgrep-excludes --exclude-dir={*\.git*,*\.svn*,*\.bzr*,*\.hg*} --color $@ .
+}
+alias vi='vim'
+{% if grains['fqdn'] == 'wlaptop.localdomain' -%}
+export LC_ALL='en_US.utf-8'
+export LANG='en_US.utf-8'
+export EDITOR=/usr/bin/vim
+export FIGNORE=.svn:.git
+
+alias l='ls -a --color'
+alias ll='ls -lFNBph --color'
+alias d='ls -F --color | ls -d */'
+alias find='find -L'
+
+alias ssh-donnie='ssh donnie.essentialed.org'
+alias ssh-bernie='ssh bernie.essentialed.org'
+alias ssh-thedude='ssh thedude.essentialed.org'
+alias ssh-delmar='ssh delmar.essentialed.org'
+alias ssh-charlie='ssh charlie.essentialed.org'
+alias ssh-vps='ssh vps.essentialed.org'
+alias ssh-rooster='ssh rooster.essentialed.org'
+alias ssh-walter='ssh walter.essentialed.org'
+
+alias proxy-web='ssh -D 9999 -N 83864.com'
+
+alias couch-donnie='ssh -f -N -L 5990:127.0.0.1:5984 donnie.essentialed.org && echo "http://localhost:5990/_utils/index.html"'
+alias couch-bernie='ssh -f -N -L 5991:127.0.0.1:5984 bernie.essentialed.org && echo "http://localhost:5991/_utils/index.html"'
+alias couch-thedude='ssh -f -N -L 5992:127.0.0.1:5984 thedude.essentialed.org && echo "http://localhost:5992/_utils/index.html"'
+alias couch-delmar='ssh -f -N -L 5993:127.0.0.1:5984 delmar.essentialed.org && echo "http://localhost:5993/_utils/index.html"'
+alias couch-leonrd='ssh -f -N -L 5994:127.0.0.1:5984 www.leonrd.com && echo "http://localhost:5994/_utils/index.html"'
+alias couch-walter='ssh -f -N -L 5995:127.0.0.1:5984 walter.essentialed.org && echo "http://localhost:5995/_utils/index.html"'
+
+alias git_update_all='for d in `find -type d -name \.git` ; do cd ${d%%.git} && echo "Updating ${d%%.git}" && git pull && cd - ; done'
+alias sudo='sudo env PATH=$PATH'
+
+alias up='svn up --ignore-externals'
+alias status='svn status --ignore-externals'
+
+wless(){
+  wget -q -O - --save-headers $* | less
+}
+cvs_update(){
+for i in *; do cd $i; cvs update; cd /home/wendallc/cvs; done
+}
+svn_update(){
+for i in *; do cd $i; svn update; cd ..; done
+}
+svn_update_www(){
+cd /var/www; for i in *; do cd $i/htdocs; svn update; cd /var/www; done
+}
+rm_svn_recursive() {
+  find . -name .svn -print0 | xargs -0 rm -rf
+}
+#for doing recursive svn adds
+svn_add_all(){
+svn status --ignore-externals | grep "^?" | awk '{print $2}' | xargs svn add
+}
+svn_rm_all_added(){
+svn status --ignore-externals | grep "^A" | awk '{print $2}' | xargs svn --force rm
+}
+svn_rm_all_modified(){
+svn status --ignore-externals | grep "^M" | awk '{print $2}' | xargs rm
+}
+svn_rm_all_unk(){
+svn status --ignore-externals | grep "^?" | awk '{print $2}' | xargs rm -r
+}
+svn_revert_all(){
+svn status --ignore-externals | grep "^M" | awk '{print $2}' | xargs svn revert
+}
+
+#Change to working vhost directory
+function vh() {
+  if [ -n "$1" ]; then
+    IFS='
+'
+    DIRS=(`ls -1 /var/www`)
+    let SELECT=$1-1
+    cd /var/www/${DIRS[$SELECT]}/htdocs;
+    pwd
+  else
+    PS3='vhost: '
+    select name in `ls -1 /var/www`; do
+      if [ -n "$name" ]; then
+        cd /var/www/$name/htdocs;
+        pwd
+      fi
+      break
+    done
+  fi
+}
+{%- endif %}

@@ -1,0 +1,62 @@
+#!/bin/bash
+
+updaterepo() {
+    for distro_and_version in $DIST_VER
+    do
+        for arch in $ARCH
+
+        do
+            pushd ${distro_and_version}/${arch} >/dev/null 2>&1
+
+                createrepo --update .
+
+            popd >/dev/null 2>&1
+
+        done
+    done
+}
+
+usage () {
+cat << EOF
+usage: $0 options
+
+This updates yum repositories for distro/version.
+
+Options:
+  -h    Show this message
+  -a    Arch to target. Defaults: ${ARCH}
+  -d    distro/version to target ex. -d fedora/16
+EOF
+}
+
+while getopts "hd:a:" OPTION
+do
+    case $OPTION in
+        h)
+            usage
+            exit 1
+            ;;
+        a)
+            ARCH=$OPTARG
+            ;;
+        d)
+            DIST_VER=$OPTARG
+            ;;
+        ?)
+            usage
+            exit 1
+    esac
+done
+
+if [[ -z $ARCH ]]
+then
+ARCH='i586 i686 i686/debuginfo x86_64 x86_64/debuginfo SRPMS'
+fi
+
+if [[ -z $DIST_VER ]]
+then
+    usage
+    exit 1
+else
+    updaterepo
+fi

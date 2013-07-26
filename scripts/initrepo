@@ -1,0 +1,74 @@
+#!/bin/bash
+
+initrepo () {
+    for distro_and_version in $DIST_VER
+    do
+        mkdir -p ${distro_and_version}
+        for arch in $ARCH
+
+        do
+            mkdir ${distro_and_version}/${arch}
+            pushd ${distro_and_version}/${arch} >/dev/null 2>&1
+
+                createrepo .
+                gpg --default-key "${signer}" --detach-sign --armor repodata/repomd.xml
+
+            popd >/dev/null 2>&1
+
+        done
+    done
+}
+
+usage () {
+cat << EOF
+usage: $0 options
+
+This initializes yum repositories for distro/version.
+
+Options:
+  -h    Show this message
+  -s    Signer identification string
+  -a    Arch to target. Defaults: ${ARCH}
+  -d    distro/version to target ex. -d fedora/16
+EOF
+}
+
+while getopts "hd:a:s:" OPTION
+do
+    case $OPTION in
+        h)
+            usage
+            exit 1
+            ;;
+        s)
+            SIGNER=$OPTARG
+            ;;
+        a)
+            ARCH=$OPTARG
+            ;;
+        d)
+            DIST_VER=$OPTARG
+            ;;
+        ?)
+            usage
+            exit 1
+    esac
+done
+
+if [[ -z $ARCH ]]
+then
+ARCH='i686 i686/debuginfo x86_64 x86_64/debuginfo SRPMS'
+fi
+
+if [[ -z $SIGNER ]]
+then
+SIGNER='Wendall Cada <wendallc@83864.com>'
+fi
+
+if [[ -z $DIST_VER ]]
+then
+    usage
+    exit 1
+else
+    initrepo
+fi

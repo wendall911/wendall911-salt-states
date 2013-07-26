@@ -1,0 +1,11 @@
+127.0.0.1 {{ my_host }} localhost localhost4.localdomain4 localhost.localdomain localhost4
+::1 {{ my_host }} localhost localhost.localdomain localhost6 localhost6.localdomain6
+{{ my_ip_addr }} {{ my_fqdn }}
+{% if grains['fqdn'] == 'wlaptop.localdomain' -%}
+
+10.1.10.230 tatiana
+10.1.10.175 kathy
+10.1.10.174 ashar
+10.1.10.100 mediapc
+
+{%- endif %}

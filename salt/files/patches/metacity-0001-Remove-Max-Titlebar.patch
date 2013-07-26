@@ -1,0 +1,17 @@
+--- metacity-theme-3.xml.orig	2013-01-23 15:24:20.230530627 -0800
++++ metacity-theme-3.xml	2013-01-23 15:24:37.430650985 -0800
+@@ -46,12 +46,12 @@
+ 	<distance name="right_titlebar_edge" value="1"/>
+ </frame_geometry>
+ 
+-<frame_geometry name="max" title_scale="medium" parent="normal" rounded_top_left="false" rounded_top_right="false">
++<frame_geometry has_title="false" name="max" title_scale="medium" parent="normal" rounded_top_left="false" rounded_top_right="false">
+ 	<distance name="left_width" value="0" />
+ 	<distance name="right_width" value="0" />
+ 	<distance name="left_titlebar_edge" value="0"/>
+ 	<distance name="right_titlebar_edge" value="0"/>
+-	<distance name="title_vertical_pad" value="8"/> <!-- 
++	<distance name="title_vertical_pad" value="0"/> <!-- 
+ 							This needs to be 1 less then the
+ 							title_vertical_pad on normal state
+ 							or you'll have bigger buttons 								-->
