@@ -1,17 +1,12 @@
 salt-minion:
-  pkg.installed:
-    {% if grains['osfullname'] == 'CentOS' or grains['osfullname'] == 'Amazon Linux AMI' %}
-    - fromrepo: essentialed-centos
-    {% elif grains['osfullname'] == 'Fedora' %}
-    - fromrepo: essentialed-fedora
-    {% endif %}
+  pkg:
+    - installed
   service:
     - running
     - enable: True
     - require:
       - file: /etc/salt/minion
       - pkg: salt-minion
-      - file: /etc/yum.repos.d/essentialed.repo
     - watch:
       - file: /etc/salt/minion
       - pkg: salt-minion

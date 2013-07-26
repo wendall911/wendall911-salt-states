@@ -1,13 +1,12 @@
 salt-master:
-  pkg.installed:
-    - fromrepo: essentialed-centos
+  pkg:
+    - installed
   service:
     - running
     - enable: True
     - require:
       - file: /etc/salt/master
       - pkg: salt-master
-      - file: /etc/yum.repos.d/essentialed.repo
     - watch:
       - file: /etc/salt/master
       - pkg: salt-master
