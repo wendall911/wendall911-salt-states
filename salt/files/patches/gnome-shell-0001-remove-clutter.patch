@@ -1,15 +1,15 @@
---- panel.js.orig	2013-01-23 16:50:02.137569691 -0800
-+++ panel.js	2013-01-23 16:50:35.438687331 -0800
-@@ -897,7 +897,7 @@ const PANEL_ITEM_IMPLEMENTATIONS = {
+--- panel.js.orig	2013-07-26 15:39:35.032923977 -0700
++++ panel.js	2013-07-26 15:40:45.108247990 -0700
+@@ -918,7 +918,7 @@
      'activities': ActivitiesButton,
      'appMenu': AppMenuButton,
      'dateMenu': imports.ui.dateMenu.DateMenuButton,
 -    'a11y': imports.ui.status.accessibility.ATIndicator,
 +//    'a11y': imports.ui.status.accessibility.ATIndicator,
+     'a11yGreeter': imports.ui.status.accessibility.ATGreeterIndicator,
      'volume': imports.ui.status.volume.Indicator,
      'battery': imports.ui.status.power.Indicator,
-     'lockScreen': imports.ui.status.lockScreenMenu.Indicator,
-@@ -906,9 +906,9 @@ const PANEL_ITEM_IMPLEMENTATIONS = {
+@@ -928,9 +928,9 @@
      'userMenu': imports.ui.userMenu.UserMenuButton
  };
  
