@@ -1,7 +1,7 @@
 127.0.0.1 {{ my_host }} localhost localhost4.localdomain4 localhost.localdomain localhost4
 ::1 {{ my_host }} localhost localhost.localdomain localhost6 localhost6.localdomain6
 {{ my_ip_addr }} {{ my_fqdn }}
-{% if grains['fqdn'] == 'wlaptop.localdomain' -%}
+{% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
 
 10.1.10.230 tatiana
 10.1.10.175 kathy
