@@ -2,7 +2,7 @@ include:
   - packages.gcc
   - packages.meld
   - packages.git
-  - packages.vim
+  - packages.vim-enhanced
   - packages.screen
   - packages.subversion
   - packages.mercurial
