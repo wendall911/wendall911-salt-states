@@ -1,0 +1,4 @@
+subversion:
+  pkg:
+    - installed
+

@@ -1,0 +1,4 @@
+screen:
+  pkg:
+    - installed
+
