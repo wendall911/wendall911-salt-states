@@ -1,32 +1,19 @@
-/etc/yum.repos.d/rpmfusion-free-rawhide.repo:
-  file.absent
-#    - source: salt://files/yum.repos.d/rpmfusion-free-rawhide.repo
+rpmfusion-free-repo:
+  - humanname: RPM Fusion for Fedora $releasever - Free
+  - mirrorlist: http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-$releasever&arch=$basearch
+  - gpgcheck: 0
 
-/etc/yum.repos.d/rpmfusion-free.repo:
-  file.absent
-#    - source: salt://files/yum.repos.d/rpmfusion-free.repo
+rpmfusion-free-updates-repo:
+  - humanname: RPM Fusion for Fedora $releasever - Free - Updates
+  - mirrorlist:http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-updates-released-$releasever&arch=$basearch
+  - gpgcheck: 0
 
-/etc/yum.repos.d/rpmfusion-free-updates.repo:
-  file.absent
-#    - source: salt://files/yum.repos.d/rpmfusion-free-updates.repo
+rpmfusion-nonfree-repo:
+  - humanname: RPM Fusion for Fedora $releasever - Nonfree
+  - mirrorlist: http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-$releasever&arch=$basearch
+  - gpgcheck: 0
 
-/etc/yum.repos.d/rpmfusion-free-updates-testing.repo:
-  file.absent
-#    - source: salt://files/yum.repos.d/rpmfusion-free-updates-testing.repo
-
-/etc/yum.repos.d/rpmfusion-nonfree-rawhide.repo:
-  file.absent
-#    - source: salt://files/yum.repos.d/rpmfusion-nonfree-rawhide.repo
-
-/etc/yum.repos.d/rpmfusion-nonfree.repo:
-  file.absent
-#    - source: salt://files/yum.repos.d/rpmfusion-nonfree.repo
-
-/etc/yum.repos.d/rpmfusion-nonfree-updates.repo:
-  file.absent
-#    - source: salt://files/yum.repos.d/rpmfusion-nonfree-updates.repo
-
-/etc/yum.repos.d/rpmfusion-nonfree-updates-testing.repo:
-  file.absent
-#    - source: salt://files/yum.repos.d/rpmfusion-nonfree-updates-testing.repo
-
+rpmfusion-nonfree-updates-repo:
+  - humanname: RPM Fusion for Fedora $releasever - Nonfree - Updates
+  - mirrorlist: http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-updates-released-$releasever&arch=$basearch
+  - gpgcheck: 0
