@@ -7,7 +7,7 @@ rpmfusion-free-repo:
 rpmfusion-free-updates-repo:
   pkgrepo.managed:
     - humanname: RPM Fusion for Fedora $releasever - Free - Updates
-    - mirrorlist:http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-updates-released-$releasever&arch=$basearch
+    - mirrorlist: http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-updates-released-$releasever&arch=$basearch
     - gpgcheck: 0
 
 rpmfusion-nonfree-repo:
