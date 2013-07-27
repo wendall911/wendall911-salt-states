@@ -3,7 +3,7 @@ epel-release:
     - removed
 
 /etc/yum.repos.d/epel.repo:
-  -  file.absent
+  file.absent
 
 epel-repo:
   pkgrepo.managed:
