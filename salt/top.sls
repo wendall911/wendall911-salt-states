@@ -8,3 +8,6 @@ base:
 
   'saltmaster.83864.com':
     - base.saltmaster
+
+  'mediapc.localdomain':
+    - base.mediapc
