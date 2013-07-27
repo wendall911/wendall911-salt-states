@@ -10,7 +10,7 @@ function rgrep() {
     grep -IR --exclude-from=$HOME/.rgrep-excludes --exclude-dir={*\.git*,*\.svn*,*\.bzr*,*\.hg*} --color $@ .
 }
 alias vi='vim'
-{% if grains['fqdn'] == 'wlaptop.localdomain' -%}
+{% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
 export LC_ALL='en_US.utf-8'
 export LANG='en_US.utf-8'
 export EDITOR=/usr/bin/vim
@@ -29,6 +29,14 @@ alias ssh-charlie='ssh charlie.essentialed.org'
 alias ssh-vps='ssh vps.essentialed.org'
 alias ssh-rooster='ssh rooster.essentialed.org'
 alias ssh-walter='ssh walter.essentialed.org'
+
+alias ssh-tatiana='ssh 10.1.10.230'
+alias ssh-kathy='ssh 10.1.10.175'
+alias ssh-ashar='ssh 10.1.10.174'
+alias ssh-mediapc='ssh 10.1.10.100'
+alias ssh-mc='ssh 67.228.90.250'
+alias ssh-wlaptop='ssh 10.1.10.249'
+alias ssh-wdesktop='ssh 10.1.10.250'
 
 alias proxy-web='ssh -D 9999 -N 83864.com'
 
