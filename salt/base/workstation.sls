@@ -7,3 +7,4 @@ include:
   - packages.fonts
   - packages.thunderbird
   - packages.gnome-shell-extension-alternate-tab
+  - packages.fedora-crap
