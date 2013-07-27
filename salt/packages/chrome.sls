@@ -1,4 +1,3 @@
 google-chrome-stable:
-  pkg:
-    - installed
-
+  pkg.installed:
+    - skip_verify: True
