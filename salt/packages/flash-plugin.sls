@@ -1,3 +1,4 @@
 flash-plugin:
-  - pkg:
+  pkg:
     - installed
+
