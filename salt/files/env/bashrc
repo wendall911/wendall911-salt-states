@@ -29,6 +29,7 @@ alias ssh-charlie='ssh charlie.essentialed.org'
 alias ssh-vps='ssh vps.essentialed.org'
 alias ssh-rooster='ssh rooster.essentialed.org'
 alias ssh-walter='ssh walter.essentialed.org'
+alias ssh-stranger='ssh stranger.essentialed.org'
 
 alias ssh-tatiana='ssh 10.1.10.230'
 alias ssh-kathy='ssh 10.1.10.175'
@@ -46,6 +47,7 @@ alias couch-thedude='ssh -f -N -L 5992:127.0.0.1:5984 thedude.essentialed.org &&
 alias couch-delmar='ssh -f -N -L 5993:127.0.0.1:5984 delmar.essentialed.org && echo "http://localhost:5993/_utils/index.html"'
 alias couch-leonrd='ssh -f -N -L 5994:127.0.0.1:5984 www.leonrd.com && echo "http://localhost:5994/_utils/index.html"'
 alias couch-walter='ssh -f -N -L 5995:127.0.0.1:5984 walter.essentialed.org && echo "http://localhost:5995/_utils/index.html"'
+alias couch-stranger='ssh -f -N -L 5996:127.0.0.1:5984 stranger.essentialed.org && echo "http://localhost:5996/_utils/index.html"'
 
 alias git_update_all='for d in `find -type d -name \.git` ; do cd ${d%%.git} && echo "Updating ${d%%.git}" && git pull && cd - ; done'
 alias sudo='sudo env PATH=$PATH'
