@@ -45,7 +45,7 @@
     - mode: 644
     - template: jinja
 
-/root/.bashrc
+/root/.bashrc:
   file.managed:
     - source: salt://files/env/root_bashrc
     - user: root
