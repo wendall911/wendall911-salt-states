@@ -35,7 +35,7 @@ alias ssh-tatiana='ssh 10.1.10.230'
 alias ssh-kathy='ssh 10.1.10.175'
 alias ssh-ashar='ssh 10.1.10.174'
 alias ssh-mediapc='ssh 10.1.10.100'
-alias ssh-mc='ssh 67.228.90.250'
+alias ssh-saltmaster='ssh saltmaster.83864.com'
 alias ssh-wlaptop='ssh 10.1.10.249'
 alias ssh-wdesktop='ssh 10.1.10.250'
 
@@ -109,9 +109,6 @@ function vh() {
 }
 {%- endif %}
 
-# Fedora default prompt sucks I know what directory and machine I'm on.
-PS1="\W \\$ "
-
 case $TERM in
 xterm*|vte*)
     if [ -e /etc/sysconfig/bash-prompt-xterm ]; then
@@ -135,6 +132,7 @@ screen*)
             printf '\ek%s\e\\' "$HPWD"
         } 
         PROMPT_COMMAND='screen_set_window_title'
+        PS1="\W \\$ "
     fi
     ;;
 *)

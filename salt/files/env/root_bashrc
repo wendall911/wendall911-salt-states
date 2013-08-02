@@ -11,8 +11,6 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-PS1="\W \\$ "
-
 case $TERM in
 xterm*|vte*)
     if [ -e /etc/sysconfig/bash-prompt-xterm ]; then
@@ -36,6 +34,7 @@ screen*)
             printf '\ek%s\e\\' "$HPWD"
         } 
         PROMPT_COMMAND='screen_set_window_title'
+        PS1="\W \\$ "
     fi
     ;;
 *)
