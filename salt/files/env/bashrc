@@ -109,6 +109,8 @@ function vh() {
 }
 {%- endif %}
 
+PS1="[\u@\h \W]\\$ "
+
 case $TERM in
 xterm*|vte*)
     if [ -e /etc/sysconfig/bash-prompt-xterm ]; then

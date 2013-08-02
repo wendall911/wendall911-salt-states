@@ -11,6 +11,8 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+PS1="[\u@\h \W]\\$ "
+
 case $TERM in
 xterm*|vte*)
     if [ -e /etc/sysconfig/bash-prompt-xterm ]; then
