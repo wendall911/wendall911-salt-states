@@ -18,3 +18,4 @@ include:
   - packages.gnome-shell-extension-alternate-tab
   - packages.fedora-crap
   - packages.hplip-gui
+  - packages.openssh-server
