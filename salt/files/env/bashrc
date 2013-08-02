@@ -108,3 +108,43 @@ function vh() {
   fi
 }
 {%- endif %}
+
+# Fedora default prompt sucks I know what directory and machine I'm on.
+PS1="\W \\$ "
+
+case $TERM in
+xterm*|vte*)
+    if [ -e /etc/sysconfig/bash-prompt-xterm ]; then
+        PROMPT_COMMAND=/etc/sysconfig/bash-prompt-xterm
+    else
+        PROMPT_COMMAND='printf "\033]0;%s\007" "${PWD/#$HOME/~}"'
+    fi
+    ;;
+screen*)
+    if [ -e /etc/sysconfig/bash-prompt-screen ]; then
+        PROMPT_COMMAND=/etc/sysconfig/bash-prompt-screen
+    else
+        screen_set_window_title () {
+            local HPWD="$PWD"
+            case $HPWD in
+            $HOME) HPWD="~";;
+
+
+            ## long name option:
+            # $HOME/*) HPWD="~${HPWD#$HOME}";;
+
+
+            ## short name option:
+            *) HPWD=`basename "$HPWD"`;;
+
+
+            esac
+            printf '\ek%s\e\\' "$HPWD"
+        } 
+        PROMPT_COMMAND='screen_set_window_title'
+    fi
+    ;;
+*)
+    [ -e /etc/sysconfig/bash-prompt-default ] && PROMPT_COMMAND=/etc/sysconfig/bash-prompt-default
+    ;;
+esac

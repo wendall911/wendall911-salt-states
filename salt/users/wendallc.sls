@@ -45,6 +45,13 @@
     - mode: 644
     - template: jinja
 
+/root/.bashrc
+  file.managed:
+    - source: salt://files/env/root_bashrc
+    - user: root
+    - group: root
+    - mode: 644
+
 /home/{{ my_user }}/.rgrep-excludes:
   file.managed:
     - source: salt://files/env/rgrep-excludes
