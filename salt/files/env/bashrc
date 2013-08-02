@@ -129,14 +129,7 @@ screen*)
             case $HPWD in
             $HOME) HPWD="~";;
 
-
-            ## long name option:
-            # $HOME/*) HPWD="~${HPWD#$HOME}";;
-
-
-            ## short name option:
             *) HPWD=`basename "$HPWD"`;;
-
 
             esac
             printf '\ek%s\e\\' "$HPWD"
