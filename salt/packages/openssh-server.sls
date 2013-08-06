@@ -18,5 +18,6 @@ openssh-server:
     - user: root
     - group: root
     - mode: 600
+    - template: jinja
     - require:
       - pkg: openssh-server
