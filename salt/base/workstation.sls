@@ -14,6 +14,8 @@ include:
   {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
   - packages.thunderbird
   - packages.chrome
+  - packages.gimp
+  - packages.inkscape
   {%- endif %}
   - packages.gnome-shell-extension-alternate-tab
   - packages.fedora-crap
