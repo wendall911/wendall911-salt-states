@@ -16,6 +16,7 @@ include:
   - packages.chrome
   - packages.gimp
   - packages.inkscape
+  - packages.pylint
   {%- endif %}
   - packages.gnome-shell-extension-alternate-tab
   - packages.fedora-crap
