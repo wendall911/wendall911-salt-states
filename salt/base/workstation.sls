@@ -6,7 +6,6 @@ include:
   - repos.virtualbox
   - users.admins
   - packages.sudo
-  - packages.ntp
   - packages.salt-minion
   - packages.gnome-tweak-tool
   - packages.fonts
