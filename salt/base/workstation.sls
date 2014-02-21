@@ -21,7 +21,7 @@ include:
   - packages.fedora-crap
   - packages.hplip-gui
   - packages.openssh-server
-  {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain or grains['fqdn'] == tjc.localdomain' -%}
+  {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' or grains['fqdn'] == tjc.localdomain' -%}
   - packages.calibre
   {%- endif %}
   {% if grains['fqdn'] == 'wlaptop.localdomain' -%}
