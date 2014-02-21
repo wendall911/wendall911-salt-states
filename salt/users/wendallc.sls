@@ -81,11 +81,6 @@
 /usr/share/themes/Adwaita/metacity-1/metacity-theme-3.xml:
   file.patch:
     - source: salt://files/patches/metacity-0001-Remove-Max-Titlebar.patch
-    - hash: md5=eac120f85db3fa146da97f8f192f5b3f
-
-/usr/share/gnome-shell/js/ui/panel.js:
-  file.patch:
-    - source: salt://files/patches/gnome-shell-0001-remove-clutter.patch
-    - hash: md5=8b74b80e30a3e6b061086de4575e6465
+    - hash: md5=5cf6cc60d1ccfe3c15548b64c1aedd3d
 
 {% endif %}
