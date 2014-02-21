@@ -1,3 +1,7 @@
+evolution-ews:
+  pkg:
+    - removed
+
 evolution:
   pkg:
     - removed
