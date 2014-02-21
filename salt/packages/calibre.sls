@@ -1,0 +1,3 @@
+calibre:
+  pkg:
+    - installed
