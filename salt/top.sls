@@ -11,3 +11,6 @@ base:
 
   'mediapc.localdomain':
     - base.mediapc
+
+  'tjc.localdomain':
+    - base.tjc
