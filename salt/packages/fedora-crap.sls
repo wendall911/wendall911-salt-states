@@ -9,11 +9,3 @@ rhythmbox:
 shotwell:
   pkg:
     - removed
-
-tigervnc-license:
-  pkg:
-    - removed
-
-tigervnc-server-minimal:
-  pkg:
-    - removed
