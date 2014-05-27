@@ -8,3 +8,5 @@ all-wcprops
 .logfile
 *.bak
 *.tmp
+*-min*
+*.min*
