@@ -23,7 +23,7 @@ alias find='find -L'
 
 alias couch-nginx='ssh -f -N -L 5990:127.0.0.1:5984 nginx.mysatori.com && echo "http://localhost:5990/_utils/index.html"'
 
-alias ssh-tatiana='ssh 10.1.10.230'
+alias ssh-tatiana='ssh 10.1.10.42'
 alias ssh-kathy='ssh 10.1.10.175'
 alias ssh-ashar='ssh 10.1.10.174'
 alias ssh-mediapc='ssh 10.1.10.100'
@@ -31,6 +31,8 @@ alias ssh-saltmaster='ssh saltmaster.83864.com'
 alias ssh-wlaptop='ssh 10.1.10.249'
 alias ssh-wdesktop='ssh 10.1.10.250'
 alias ssh-mysatori-nginx='ssh nginx.mysatori.com'
+alias ssh-mysatori-mysRobot-Testing-1='ssh 104.130.127.193'
+alias ssh-mysatori-mysRobot-Testing-2='ssh 104.130.244.182'
 
 alias proxy-web='ssh -D 9999 -N 83864.com'
 
