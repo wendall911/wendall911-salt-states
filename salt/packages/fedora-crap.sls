@@ -1,15 +1,19 @@
-evolution-ews:
-  pkg:
-    - removed
-
 evolution:
   pkg:
     - removed
 
-rhythmbox:
+shotwell:
   pkg:
     - removed
 
-shotwell:
+gnome-boxes:
+  pkg:
+    - removed
+
+empathy:
+  pkg:
+    - removed
+
+devassistant:
   pkg:
     - removed

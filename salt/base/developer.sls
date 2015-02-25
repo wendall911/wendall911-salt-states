@@ -6,3 +6,5 @@ include:
   - packages.screen
   - packages.subversion
   - packages.mercurial
+  - packages.couchdb
+  - packages.nginx

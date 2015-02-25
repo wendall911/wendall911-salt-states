@@ -1,5 +1,4 @@
 include:
-  - repos.dropbox
   - repos.flash
   - repos.google-chrome
   - repos.rpmfusion
