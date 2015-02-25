@@ -81,6 +81,6 @@
 /usr/share/themes/Adwaita/metacity-1/metacity-theme-3.xml:
   file.patch:
     - source: salt://files/patches/metacity-0001-Remove-Max-Titlebar.patch
-    - hash: md5=7258da7923c51a4d27c7631bb62aef85
+    - hash: md5=0399d7288807e1dd5f10afe4df1a17be
 
 {% endif %}
