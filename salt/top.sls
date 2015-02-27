@@ -14,3 +14,9 @@ base:
 
   'tjc.localdomain':
     - base.tjc
+
+  'kathy.localdomain':
+    - base.kathy
+
+  'ashar.localdomain':
+    - base.ashar
