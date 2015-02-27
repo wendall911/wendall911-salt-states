@@ -10,6 +10,7 @@ include:
   - packages.fonts
   - packages.flash-plugin
   - packages.unison
+  - packages.java
   {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
   - packages.thunderbird
   - packages.chrome
