@@ -9,6 +9,7 @@ include:
   - packages.gnome-tweak-tool
   - packages.fonts
   - packages.flash-plugin
+  - packages.unison
   {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
   - packages.thunderbird
   - packages.chrome
@@ -25,4 +26,7 @@ include:
   {%- endif %}
   {% if grains['fqdn'] == 'wlaptop.localdomain' -%}
   - packages.pidgin
+  {%- endif %}
+  {% if grains['fqdn'] == 'kathy.localdomain' -%}
+  - packages.vlc
   {%- endif %}
