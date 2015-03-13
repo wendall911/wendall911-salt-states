@@ -37,6 +37,7 @@ alias ssh-mysatori-mysRobot-Testing-2='ssh 104.130.244.182'
 alias proxy-web='ssh -D 9999 -N 83864.com'
 
 alias git_update_all='for d in `find -type d -name \.git` ; do cd ${d%%.git} && echo "Updating ${d%%.git}" && git pull && cd - ; done'
+alias git_clean_all='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 alias sudo='sudo env PATH=$PATH'
 
 alias up='svn up --ignore-externals'
