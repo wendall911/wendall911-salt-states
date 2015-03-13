@@ -2,5 +2,5 @@
 <%!
 machine_name = "tjc"
 domain = "localdomain"
-ip_addr = "10.1.10.230"
+ip_addr = "10.1.10.245"
 %>
