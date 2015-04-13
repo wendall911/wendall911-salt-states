@@ -1,4 +1,5 @@
 include:
+  - users.mc
   - base.server
   - services.saltmaster
   - packages.scl-utils
