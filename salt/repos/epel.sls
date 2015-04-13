@@ -7,14 +7,14 @@ epel-release:
 
 epel-repo:
   pkgrepo.managed:
-    - humanname: Extra Packages for Enterprise Linux 6 - $basearch
-    - mirrorlist: https://mirrors.fedoraproject.org/metalink?repo=epel-6&arch=$basearch
-    - gpgkey: https://fedoraproject.org/static/0608B895.txt
+    - humanname: Extra Packages for Enterprise Linux 7 - $basearch
+    - mirrorlist: https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch
+    - gpgkey: https://getfedora.org/static/352C64E5.txt
     - gpgcheck: 1
 
 epel-testing-repo:
   pkgrepo.managed:
-    - humanname: Extra Packages for Enterprise Linux 6 - Testing - $basearch
-    - mirrorlist: https://mirrors.fedoraproject.org/metalink?repo=testing-epel6&arch=$basearch
-    - gpgkey: https://fedoraproject.org/static/0608B895.txt
+    - humanname: Extra Packages for Enterprise Linux 7 - Testing - $basearch
+    - mirrorlist: https://mirrors.fedoraproject.org/metalink?repo=testing-epel7&arch=$basearch
+    - gpgkey: https://getfedora.org/static/352C64E5.txt
     - gpgcheck: 1
