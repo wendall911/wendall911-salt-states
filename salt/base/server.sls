@@ -7,3 +7,4 @@ include:
   - packages.salt-minion
   - packages.httpd
   - packages.openssh-server
+  - packages.screen
