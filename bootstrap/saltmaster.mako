@@ -2,5 +2,5 @@
 <%!
 machine_name = "saltmaster"
 domain = "83864.com"
-ip_addr = "199.127.225.144"
+ip_addr = "104.236.131.171"
 %>
