@@ -1,0 +1,3 @@
+scl-utils:
+  pkg:
+    - installed
