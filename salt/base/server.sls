@@ -1,6 +1,6 @@
 include:
   - users.admins
-  - repos.epel
+  - packages.epel
   - packages.sudo
   - packages.ntp
   - packages.git
