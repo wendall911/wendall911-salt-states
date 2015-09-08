@@ -1,7 +1,6 @@
 [user]
 	name = {{ my_name }}
 	email = {{ my_email }}
-{% if grains['fqdn'] == 'wlaptop.localdomain' -%}
-[alias]
-    meld = !/home/wendallc/Repos/git/github/git-meld/git-meld.pl
-{%- endif %}
+
+[merge]
+    tool = meld
