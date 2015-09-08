@@ -76,11 +76,3 @@
     - mode: 644
 {% endif %}
 
-{% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' %}
-
-/usr/share/themes/Adwaita/metacity-1/metacity-theme-3.xml:
-  file.patch:
-    - source: salt://files/patches/metacity-0001-Remove-Max-Titlebar.patch
-    - hash: md5=0399d7288807e1dd5f10afe4df1a17be
-
-{% endif %}
