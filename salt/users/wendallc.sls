@@ -26,6 +26,33 @@
     - require:
       - user: {{ my_user }}
 
+/home/{{ my_user }}/.vimrc:
+  file.managed:
+    - source: salt://files/env/vimrc
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 644
+
+{% for dir in '/', '/ftdetect', '/syntax', '/colors', '/after', '/autoload', '/ftplugin', '/indent', '/compiler' %}
+/home/{{ my_user }}/.vim{{dir}}:
+  file.directory:
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 755
+    - makedirs: True
+    - require:
+      - user: {{ my_user }}
+{% endfor %}
+
+{% for file in 'ftdetect/node.vim', 'ftdetect/sls.vim', 'syntax/jquery.vim', 'syntax/python.vim', 'syntax/javascript.vim', 'syntax/sls.vim', 'syntax/perl.vim', 'syntax/mako.vim', 'syntax/pod.vim', 'syntax/actionscript.vim', 'filetype.vim', '.netrwhist', 'colors/inkpot.vim', 'colors/desert256.vim', 'after/ftplugin', 'after/ftplugin/python.vim', 'after/ftplugin/javascript.vim', 'ftplugin/rst.vim', 'ftplugin/sls.vim', 'indent/javascript.vim', 'compiler/gjslint.vim', 'compiler/pylint.vim' %}
+/home/{{ my_user }}/.vim/{{file}}:
+  file.managed:
+    - source: salt://files/env/dot_vim/{{file}}
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 644
+{% endfor %}
+
 /home/{{ my_user }}/.gitconfig:
   file.managed:
     - source: salt://files/env/gitconfig
