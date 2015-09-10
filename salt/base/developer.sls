@@ -8,6 +8,7 @@ include:
   - packages.mercurial
   - packages.couchdb
   - packages.nginx
+  - packages.nodejs
 
 {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
 /etc/couchdb/local.ini:
