@@ -29,13 +29,14 @@ include:
     - template: jinja
     - require:
       - pkg: nginx
+    {% if grains['fqdn'] == 'wdesktop.localdomain' -%}
     - defaults:
-      {% if grains['fqdn'] == 'wdesktop.localdomain' -%}
       ip_addr: 10.1.10.250
-      {%- endif %}
-      {% if grains['fqdn'] == 'wlaptop.localdomain' -%}
+    {%- endif %}
+    {% if grains['fqdn'] == 'wlaptop.localdomain' -%}
+    - defaults:
       ip_addr: 10.1.10.249
-      {%- endif %}
+    {%- endif %}
 
 httpd_can_network_connect:
   selinux.boolean
