@@ -6,6 +6,7 @@
 <%namespace name="hosts" file="/includes/hosts.mako"/>\
 
 ${hosts.host_file(self.attr.machine_name, self.attr.domain, self.attr.ip_addr)}
+hostname ${self.attr.machine_name}${self.attr.domain}
 ${repos.epel()}
 
 yum install -y salt-master salt-minion git
@@ -15,8 +16,8 @@ ${conf.saltminion()}
 ${users.wendallc()}
 ${users.saltmaster(self.attr.machine_name)}
 
-service salt-master start
-service salt-minion start
+systemctl start salt-master
+systemctl start salt-minion
 # Wait 30 seconds to give time for keys to generate after minion starts
 sleep 30
 salt-key -A
