@@ -1,5 +1,3 @@
 <%def name="epel()">\
-cat >/etc/yum.repos.d/epel.repo << 'EOL'
-<%include file="/files/yum.repos.d/epel.repo"/>\
-EOL
+yum install -y http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
 </%def>\
