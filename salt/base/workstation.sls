@@ -31,3 +31,6 @@ include:
   {% if grains['fqdn'] == 'kathy.localdomain' -%}
   - packages.vlc
   {%- endif %}
+  {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' or grains['fqdn'] == 'ashar.localdomain' -%}
+  - packages.steam
+  {%- endif %}
