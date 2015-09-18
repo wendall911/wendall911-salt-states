@@ -7,7 +7,7 @@
 
 ${hosts.host_file(self.attr.machine_name, self.attr.domain, self.attr.ip_addr)}
 
-yum install -y salt-minion
+dnf install -y salt-minion
 
 ${conf.saltminion()}
 ${users.wendallc()}
