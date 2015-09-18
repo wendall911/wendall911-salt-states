@@ -20,3 +20,6 @@ base:
 
   'ashar.localdomain':
     - base.ashar
+
+  'minecraft.localdomain':
+    - base.minecraft
