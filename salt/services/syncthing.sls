@@ -5,9 +5,8 @@ syncthing@tatiana:
 {% else %}
 syncthing@wendallc:
 {%- endif %}
-  - service:
-    - running
+  - service.running:
     - enable: True
     - require:
-      - pkg: syncthing
+      - pkg: syncthing-rpm
 
