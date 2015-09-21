@@ -2,10 +2,10 @@
 syncthing@kathy:
 {% elif grains['fqdn'] == 'tjc.localdomain' -%}
 syncthing@tatiana:
-{% else %}
+{% else -%}
 syncthing@wendallc:
 {%- endif %}
-  - service.running:
+  service.running:
     - enable: True
     - require:
       - pkg: syncthing-rpm
