@@ -5,6 +5,7 @@ include:
   - repos.virtualbox
   - users.admins
   - packages.syncthing
+  - services.syncthing
   - packages.sudo
   - packages.salt-minion
   - packages.gnome-tweak-tool
