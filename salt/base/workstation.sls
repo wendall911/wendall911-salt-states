@@ -3,8 +3,8 @@ include:
   - repos.google-chrome
   - repos.rpmfusion
   - repos.virtualbox
-  - repos.syncthing
   - users.admins
+  - packages.syncthing
   - packages.sudo
   - packages.salt-minion
   - packages.gnome-tweak-tool
@@ -29,6 +29,7 @@ include:
   {%- endif %}
   {% if grains['fqdn'] == 'wlaptop.localdomain' -%}
   - packages.pidgin
+  - packages.skypeweb
   {%- endif %}
   {% if grains['fqdn'] == 'kathy.localdomain' -%}
   - packages.vlc
