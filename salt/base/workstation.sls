@@ -3,6 +3,7 @@ include:
   - repos.google-chrome
   - repos.rpmfusion
   - repos.virtualbox
+  - repos.syncthing
   - users.admins
   - packages.sudo
   - packages.salt-minion
