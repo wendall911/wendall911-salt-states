@@ -11,6 +11,7 @@ include:
   - packages.flash-plugin
   - packages.unison
   - packages.java
+  - packages.screen
   {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
   - packages.thunderbird
   - packages.chrome
