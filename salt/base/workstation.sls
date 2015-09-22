@@ -38,3 +38,4 @@ include:
   {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' or grains['fqdn'] == 'ashar.localdomain' -%}
   - packages.steam
   {%- endif %}
+  - packages.ntp
