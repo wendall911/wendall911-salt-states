@@ -13,6 +13,6 @@ syncthing-check:
     - onlyif: "rpm -q syncthing && ! rpm -q syncthing-{{ syncthing_ver }}"
   module.wait:
     - name: pkg.purge
-    - pkgs: syncthing
+      - pkgs: syncthing
     - watch:
       - cmd: syncthing-check
