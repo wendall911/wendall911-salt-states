@@ -8,7 +8,7 @@ syncthing@wendallc:
   service.running:
     - enable: True
     - require:
-      - pkg: syncthing-rpm
+      - pkg: syncthing-0.11.26-1.fc22.x86_64
     - watch:
-      - pkg: syncthing-rpm
+      - pkg: syncthing-0.11.26-1.fc22.x86_64
 
