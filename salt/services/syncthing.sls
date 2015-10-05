@@ -9,4 +9,6 @@ syncthing@wendallc:
     - enable: True
     - require:
       - pkg: syncthing-rpm
+    - watch:
+      - pkg: syncthing-rpm
 
