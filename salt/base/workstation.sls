@@ -39,3 +39,4 @@ include:
   - packages.steam
   {%- endif %}
   - packages.ntp
+  - packages.totem
