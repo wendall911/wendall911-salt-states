@@ -13,3 +13,7 @@ gstreamer-plugins-bad-free-extras:
 gstreamer-plugins-ugly:
   pkg:
     - installed
+
+gstreamer-ffmpeg:
+  pkg:
+    - installed
