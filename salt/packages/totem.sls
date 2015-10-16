@@ -17,3 +17,7 @@ gstreamer-plugins-ugly:
 gstreamer-ffmpeg:
   pkg:
     - installed
+
+gstreamer1-libav:
+  pkg:
+    - installed
