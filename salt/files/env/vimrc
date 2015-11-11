@@ -198,3 +198,11 @@ function! CompileJS()
 endfunction
 
 let javascript_enable_domhtmlcss=1
+
+" Command to convert current line into formatted json
+command! -range -nargs=0 -bar J <line1>,<line2>!python -m json.tool
+
+" remap increment deincrement numbers
+nnoremap <F6> <C-a>
+nnoremap <F7> <C-x>
+
