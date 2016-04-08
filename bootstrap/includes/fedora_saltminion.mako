@@ -7,6 +7,7 @@
 
 ${hosts.host_file(self.attr.machine_name, self.attr.domain, self.attr.ip_addr)}
 
+${repos.fedora()}
 dnf install -y salt-minion
 
 ${conf.saltminion()}
