@@ -36,6 +36,7 @@ alias ssh-mysatori-mysRobot-Testing-1='ssh 104.130.127.193'
 alias ssh-mysatori-mysRobot-Testing-2='ssh 104.130.244.182'
 alias ssh-mysatori-mysRobot-Testing-3='ssh 104.130.128.23'
 alias ssh-mysatori-mysRobot-Testing-4='ssh 104.239.145.11'
+alias ssh-mysatori-jenkinscouch='ssh 142.0.196.156'
 
 alias proxy-web='ssh -D 9999 -N 83864.com'
 
