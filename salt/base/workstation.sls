@@ -15,6 +15,8 @@ include:
   - packages.java
   - packages.screen
   {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
+  - repos.hipchat
+  - packages.hipchat
   - packages.thunderbird
   - packages.chrome
   - packages.gimp
