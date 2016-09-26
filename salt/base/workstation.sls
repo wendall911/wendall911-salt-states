@@ -4,8 +4,6 @@ include:
   - repos.rpmfusion
   - repos.virtualbox
   - users.admins
-  - packages.syncthing
-  - services.syncthing
   - packages.sudo
   - packages.salt-minion
   - packages.gnome-tweak-tool
@@ -27,15 +25,12 @@ include:
   - packages.fedora-crap
   - packages.hplip-gui
   - packages.openssh-server
-  {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' or grains['fqdn'] == 'tjc.localdomain' -%}
+  {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' or grains['fqdn'] == 'tjc.localdomain' or grains['fqdn'] == 'kathy.localdomain' -%}
   - packages.calibre
   {%- endif %}
   {% if grains['fqdn'] == 'wlaptop.localdomain' -%}
   - packages.pidgin
   - packages.skypeweb
-  {%- endif %}
-  {% if grains['fqdn'] == 'kathy.localdomain' -%}
-  - packages.vlc
   {%- endif %}
   {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' or grains['fqdn'] == 'ashar.localdomain' -%}
   - packages.steam
