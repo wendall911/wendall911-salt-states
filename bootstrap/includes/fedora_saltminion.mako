@@ -6,6 +6,7 @@
 <%namespace name="hosts" file="/includes/hosts.mako"/>\
 
 ${hosts.host_file(self.attr.machine_name, self.attr.domain, self.attr.ip_addr)}
+hostname ${self.attr.machine_name}.${self.attr.domain}
 
 ${repos.fedora()}
 dnf install -y salt-minion

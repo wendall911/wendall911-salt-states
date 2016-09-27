@@ -2,7 +2,7 @@
 ## Need to add our admin user here
 ADMIN=wendallc
 ADMIN_KEY=$(cat << 'EOL'
-<%include file="/files/ssh/wendallc_id_dsa.pub"/>\
+<%include file="/files/ssh/wendallc_id_rsa.pub"/>\
 EOL
 )
 if ! id -u $ADMIN >/dev/null 2>&1; then
