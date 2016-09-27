@@ -1,3 +1,3 @@
-syncthing:
+quicksynergy:
   pkg:
     - installed
