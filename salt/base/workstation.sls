@@ -20,6 +20,7 @@ include:
   - packages.gimp
   - packages.inkscape
   - packages.pylint
+  - packages.quicksynergy
   {%- endif %}
   - packages.gnome-shell-extension-alternate-tab
   - packages.fedora-crap
