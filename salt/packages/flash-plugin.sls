@@ -1,7 +1,11 @@
 flash-plugin:
   pkg:
-    - removed
+    - installed
 
 freshplayerplugin:
   pkg:
-    - installed
+    - removed
+
+libpepflashplayer:
+  file.absent:
+    - name: /opt/google/chrome/PepperFlash/libpepflashplayer.so
