@@ -1,0 +1,3 @@
+skypeforlinux:
+  pkg:
+    - installed
