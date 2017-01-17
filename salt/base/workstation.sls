@@ -43,3 +43,6 @@ include:
   - repos.skype
   - packages.skype
   {%- endif %}
+  {% if grains['fqdn'] == 'wlaptop.localdomain' -%}
+  - packages.goldencheetah
+  {%- endif %}
