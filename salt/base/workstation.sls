@@ -30,10 +30,6 @@ include:
   {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' or grains['fqdn'] == 'tjc.localdomain' or grains['fqdn'] == 'kathy.localdomain' -%}
   - packages.calibre
   {%- endif %}
-  {% if grains['fqdn'] == 'wlaptop.localdomain' -%}
-  - packages.pidgin
-  - packages.skypeweb
-  {%- endif %}
   {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' or grains['fqdn'] == 'ashar.localdomain' -%}
   - packages.steam
   {%- endif %}
@@ -42,7 +38,4 @@ include:
   {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'ashar.localdomain' -%}
   - repos.skype
   - packages.skype
-  {%- endif %}
-  {% if grains['fqdn'] == 'wlaptop.localdomain' -%}
-  - packages.goldencheetah
   {%- endif %}
