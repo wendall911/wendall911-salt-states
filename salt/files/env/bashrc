@@ -10,7 +10,7 @@ function rgrep() {
     grep -IR --exclude-from=$HOME/.rgrep-excludes --exclude-dir={*\.git*,*\.svn*,*\.bzr*,*\.hg*,*js-min*} --color $@ .
 }
 alias vi='vim'
-{% if grains['fqdn'] == 'w*' -%}
+{% if grains['fqdn'][0] == 'w' -%}
 export LC_ALL='en_US.utf-8'
 export LANG='en_US.utf-8'
 export EDITOR=/usr/bin/vim
