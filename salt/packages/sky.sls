@@ -1,3 +1,0 @@
-sky:
-  pkg:
-    - installed

@@ -4,4 +4,3 @@ include:
   - packages.pidgin
   - packages.skypeweb
   - packages.goldencheetah
-  - packages.sky
