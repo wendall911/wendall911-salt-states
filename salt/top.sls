@@ -1,5 +1,8 @@
 base:
   
+  'wthinkpad.localdomain':
+    - base.wthinkpad
+
   'wlaptop.localdomain':
     - base.wlaptop
 

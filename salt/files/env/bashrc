@@ -10,7 +10,7 @@ function rgrep() {
     grep -IR --exclude-from=$HOME/.rgrep-excludes --exclude-dir={*\.git*,*\.svn*,*\.bzr*,*\.hg*,*js-min*} --color $@ .
 }
 alias vi='vim'
-{% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
+{% if grains['fqdn'][0] == 'w' -%}
 export LC_ALL='en_US.utf-8'
 export LANG='en_US.utf-8'
 export EDITOR=/usr/bin/vim
@@ -29,6 +29,7 @@ alias ssh-ashar='ssh 10.1.10.174'
 alias ssh-mediapc='ssh 10.1.10.100'
 alias ssh-minecraft='ssh 10.1.10.101'
 alias ssh-saltmaster='ssh saltmaster.83864.com'
+alias ssh-wthinkpad='ssh 10.1.10.248'
 alias ssh-wlaptop='ssh 10.1.10.249'
 alias ssh-wdesktop='ssh 10.1.10.250'
 alias ssh-mysatori-nginx='ssh nginx.mysatori.com'

@@ -12,7 +12,7 @@ include:
   - packages.unison
   - packages.java
   - packages.screen
-  {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
+  {% if grains['fqdn'][0] == 'w' -%}
   - repos.hipchat
   - packages.hipchat
   - packages.thunderbird
@@ -27,15 +27,15 @@ include:
   - packages.fedora-crap
   - packages.hplip-gui
   - packages.openssh-server
-  {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' or grains['fqdn'] == 'tjc.localdomain' or grains['fqdn'] == 'kathy.localdomain' -%}
+  {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'tjc.localdomain' or grains['fqdn'] == 'kathy.localdomain' -%}
   - packages.calibre
   {%- endif %}
-  {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' or grains['fqdn'] == 'ashar.localdomain' -%}
+  {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'ashar.localdomain' -%}
   - packages.steam
   {%- endif %}
   - packages.ntp
   - packages.totem
-  {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'ashar.localdomain' -%}
+  {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'wthinkpad.localdomain' -%}
   - repos.skype
   - packages.skype
   {%- endif %}

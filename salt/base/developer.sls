@@ -9,7 +9,7 @@ include:
   - packages.nginx
   - packages.nodejs
 
-{% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
+{% if grains['fqdn'][0] == 'w' -%}
 /etc/couchdb/local.ini:
   file.managed:
     - source: salt://files/couchdb/local.ini
@@ -35,6 +35,9 @@ include:
       {%- endif %}
       {% if grains['fqdn'] == 'wlaptop.localdomain' -%}
       ip_addr: 10.1.10.249
+      {%- endif %}
+      {% if grains['fqdn'] == 'wthinkpad.localdomain' -%}
+      ip_addr: 10.1.10.248
       {%- endif %}
 
 httpd_can_network_connect:
