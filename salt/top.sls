@@ -1,8 +1,4 @@
 base:
-  
-  'wthinkpad.localdomain':
-    - base.wthinkpad
-
   'wlaptop.localdomain':
     - base.wlaptop
 
@@ -24,5 +20,5 @@ base:
   'ashar.localdomain':
     - base.ashar
 
-  'minecraft.localdomain':
+  'wthinkpad.localdomain':
     - base.minecraft
