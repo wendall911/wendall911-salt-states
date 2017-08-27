@@ -21,4 +21,4 @@ base:
     - base.ashar
 
   'wthinkpad.localdomain':
-    - base.minecraft
+    - base.wthinkpad
