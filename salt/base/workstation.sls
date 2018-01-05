@@ -39,3 +39,10 @@ include:
   - repos.skype
   - packages.skype
   {%- endif %}
+
+/etc/dnf/dnf.conf:
+  file.managed:
+    - source: salt://files/dnf/dnf.conf
+    - user: root
+    - group: root
+    - mode: 644
