@@ -10,15 +10,3 @@ all-wcprops
 *.tmp
 *-min*
 *.min*
-mysAccount.js
-mysProfiler.js
-mysTeacher.js
-mysCommon.js
-mysModuleRenderer.js
-mysTeacher.js
-mysReports.js
-mysStyle.css
-adminhelp.html
-appCheck.html
-help.html
-mmloginw.html

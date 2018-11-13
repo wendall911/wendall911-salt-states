@@ -206,3 +206,8 @@ command! -range -nargs=0 -bar J <line1>,<line2>!python -m json.tool
 nnoremap <F6> <C-a>
 nnoremap <F7> <C-x>
 
+" Fix indenting in YAML files
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" Set indent for javascript globally
+autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
