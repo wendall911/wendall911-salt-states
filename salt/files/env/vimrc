@@ -193,7 +193,7 @@ autocmd BufWriteCmd *.js,*.jsm :call CompileJS()
 function! CompileJS()
     if &modified
         write
-        execute "!diff /dev/null <(/usr/bin/js -w -c -f % |& grep .)"
+        execute "!diff /dev/null <(/usr/bin/node % |& grep .)"
     endif
 endfunction
 
