@@ -20,7 +20,6 @@ include:
   - packages.gimp
   - packages.inkscape
   - packages.pylint
-  - packages.quicksynergy
   - packages.gnome-shell-extensions
   {%- endif %}
   - packages.gnome-shell-extension-alternate-tab
@@ -38,6 +37,9 @@ include:
   {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'wthinkpad.localdomain' -%}
   - repos.skype
   - packages.skype
+  {%- endif %}
+  {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'kathy.localdomain' -%}
+  - packages.multimc
   {%- endif %}
 
 /etc/dnf/dnf.conf:
