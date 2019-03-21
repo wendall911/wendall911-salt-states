@@ -21,6 +21,7 @@ include:
   - packages.inkscape
   - packages.pylint
   - packages.gnome-shell-extensions
+  - packages.barrier
   {%- endif %}
   - packages.gnome-shell-extension-alternate-tab
   - packages.fedora-crap
