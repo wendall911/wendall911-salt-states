@@ -20,6 +20,7 @@ include:
   - packages.gimp
   - packages.inkscape
   - packages.pylint
+  - packages.gnome-shell-extension-system-monitor-applet
   - packages.gnome-shell-extensions
   - packages.barrier
   {%- endif %}
