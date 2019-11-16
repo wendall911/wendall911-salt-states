@@ -27,3 +27,13 @@ if ! id -u ${machine_name} >/dev/null 2>&1; then
     su ${machine_name} -c 'cd /home/${machine_name}; git clone --depth 1 https://github.com/wendall911/wendall911-salt-states.git wendall911-salt-states'
 fi
 </%def>\
+
+<%def name="wcada()">\
+## Need to add our admin user here
+ADMIN=wcada
+ADMIN_KEY=$(cat << 'EOL'
+<%include file="/files/ssh/wendallc_id_rsa.pub"/>\
+EOL
+)
+add_pub_key $ADMIN "$ADMIN_KEY"
+</%def>\

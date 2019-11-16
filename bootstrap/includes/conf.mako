@@ -9,3 +9,9 @@ cat >/etc/salt/minion << 'EOL'
 <%include file="/files/salt/minion"/>\
 EOL
 </%def>\
+
+<%def name="macsaltminion()">\
+cat >/usr/local/etc/salt/minion << 'EOL'
+<%include file="/files/salt/minion"/>\
+EOL
+</%def>\
