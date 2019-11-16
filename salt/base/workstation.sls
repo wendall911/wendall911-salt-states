@@ -31,7 +31,7 @@ include:
   - packages.calibre
   {%- endif %}
   {% if grains['fqdn'] == 'tjc.localdomain' -%}
-  - packages.telegram
+  - packages.telegram-desktop
   - packages.discord
   - packages.gphoto2
   {%- endif %}
