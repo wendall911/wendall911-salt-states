@@ -30,6 +30,11 @@ include:
   {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'tjc.localdomain' or grains['fqdn'] == 'kathy.localdomain' -%}
   - packages.calibre
   {%- endif %}
+  {% if grains['fqdn'] == 'tjc.localdomain' -%}
+  - packages.telegram
+  - packages.discord
+  - packages.gphoto2
+  {%- endif %}
   {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'ashar.localdomain' -%}
   - packages.steam
   {%- endif %}

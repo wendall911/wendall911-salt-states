@@ -1,0 +1,3 @@
+telegram-desktop:
+  pkg:
+    - installed
