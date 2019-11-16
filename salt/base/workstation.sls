@@ -33,7 +33,7 @@ include:
   {% if grains['fqdn'] == 'tjc.localdomain' -%}
   - packages.telegram-desktop
   - packages.discord
-  - packages.gphoto2
+  - packages.shotwell
   {%- endif %}
   {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'ashar.localdomain' -%}
   - packages.steam

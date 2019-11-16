@@ -1,3 +1,3 @@
-gphoto2:
+shotwell:
   pkg:
     - installed
