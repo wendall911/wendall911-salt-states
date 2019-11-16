@@ -1,3 +1,0 @@
-shotwell:
-  pkg:
-    - installed

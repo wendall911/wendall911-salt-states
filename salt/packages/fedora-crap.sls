@@ -4,7 +4,11 @@ evolution:
 
 shotwell:
   pkg:
+    {% if grains['fqdn'] == 'tjc.localdomain' -%}
+    - installed
+    {%- else %}
     - removed
+    {%- endif %}
 
 gnome-boxes:
   pkg:
