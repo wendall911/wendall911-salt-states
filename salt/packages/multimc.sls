@@ -1,3 +1,0 @@
-multimc:
-  pkg:
-    - installed

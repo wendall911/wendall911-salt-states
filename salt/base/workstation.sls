@@ -43,10 +43,6 @@ include:
   - repos.skype
   - packages.skype
   {%- endif %}
-  {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'kathy.localdomain' -%}
-  - packages.multimc
-  {%- endif %}
-
 /etc/dnf/dnf.conf:
   file.managed:
     - source: salt://files/dnf/dnf.conf
