@@ -13,8 +13,6 @@ include:
   - packages.java
   - packages.screen
   {% if grains['fqdn'][0] == 'w' -%}
-  - repos.hipchat
-  - packages.hipchat
   - packages.thunderbird
   - packages.chrome
   - packages.gimp
