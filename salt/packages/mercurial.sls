@@ -1,4 +1,4 @@
-mercurial:
+mercurial-py3:
   pkg:
     - installed
 
