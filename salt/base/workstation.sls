@@ -2,7 +2,7 @@ include:
   - repos.flash
   - repos.google-chrome
   - repos.rpmfusion
-  - repos.virtualbox
+#  - repos.virtualbox
   - users.admins
   - packages.sudo
   - packages.salt-minion
