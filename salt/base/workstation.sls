@@ -47,3 +47,9 @@ include:
     - user: root
     - group: root
     - mode: 644
+/etc/gdm/custom.conf:
+  file.managed:
+    - source: salt://files/gdm/custom.conf
+    - user: root
+    - group: root
+    - mode: 644
