@@ -21,3 +21,7 @@ empathy:
 devassistant:
   pkg:
     - removed
+
+anaconda-live:
+  pkg:
+    - removed

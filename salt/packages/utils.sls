@@ -1,0 +1,4 @@
+ffmpeg:
+  pkg:
+    - installed
+

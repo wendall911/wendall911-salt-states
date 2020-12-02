@@ -72,6 +72,22 @@
     - mode: 644
     - template: jinja
 
+/home/{{ my_user }}/.bash_profile:
+  file.managed:
+    - source: salt://files/env/bash_profile
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 644
+    - template: jinja
+
+/home/{{ my_user }}/.npmrc:
+  file.managed:
+    - source: salt://files/env/npmrc
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 644
+    - template: jinja
+
 /root/.bashrc:
   file.managed:
     - source: salt://files/env/root_bashrc

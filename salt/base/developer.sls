@@ -7,3 +7,4 @@ include:
   - packages.mercurial
   - packages.nginx
   - packages.nodejs
+  - packages.utils
