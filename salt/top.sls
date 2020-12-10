@@ -22,3 +22,6 @@ base:
 
   'wthinkpad.localdomain':
     - base.wthinkpad
+
+  'wgazelle.localdomain':
+    - base.wgazelle

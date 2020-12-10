@@ -37,7 +37,7 @@ include:
   {%- endif %}
   - packages.ntp
   - packages.totem
-  {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'wthinkpad.localdomain' -%}
+  {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'wthinkpad.localdomain' or grains['fqdn'] == 'wgazelle.localdomain' -%}
   - repos.skype
   - packages.skype
   {%- endif %}
