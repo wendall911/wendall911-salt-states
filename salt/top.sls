@@ -25,3 +25,6 @@ base:
 
   'wgazelle.localdomain':
     - base.wgazelle
+
+  'kieran.localdomain':
+    - base.kieran
