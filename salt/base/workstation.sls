@@ -32,7 +32,7 @@ include:
   - packages.telegram-desktop
   - packages.discord
   {%- endif %}
-  {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'kieran.localdomain' -%}
+  {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'kieran.localdomain' or grain['fqdn'] == 'kathy.localdomain' -%}
   - packages.steam
   {%- endif %}
   - packages.ntp
