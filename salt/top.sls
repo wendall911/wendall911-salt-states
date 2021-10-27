@@ -1,6 +1,6 @@
 base:
   'framework.localdomain':
-    - base.wlaptop
+    - base.framework
 
   'wdesktop.localdomain':
     - base.wdesktop
