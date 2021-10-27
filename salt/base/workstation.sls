@@ -55,7 +55,7 @@ include:
 
 {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'framework.localdomain' -%}
 /home/wendallc/tmp:
-  file.mknod:
+  file.directory:
     - user: wendallc
     - group: wendallc
     - mode: 755
