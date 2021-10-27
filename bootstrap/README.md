@@ -7,7 +7,7 @@ machine either scp or cloud-init.
 
 ## Generating Bootstrap Script from Template
 
-python3-mako-render machine_name.mako > out/machine_name.sh
+mako-render machine_name.mako > out/machine_name.sh
 
 ## Mako Include Files
 

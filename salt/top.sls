@@ -1,5 +1,5 @@
 base:
-  'wlaptop.localdomain':
+  'framework.localdomain':
     - base.wlaptop
 
   'wdesktop.localdomain':
@@ -19,9 +19,6 @@ base:
 
   'ashar.localdomain':
     - base.ashar
-
-  'wthinkpad.localdomain':
-    - base.wthinkpad
 
   'wgazelle.localdomain':
     - base.wgazelle

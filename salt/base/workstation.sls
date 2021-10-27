@@ -2,7 +2,6 @@ include:
   - repos.flash
   - repos.google-chrome
   - repos.rpmfusion
-#  - repos.virtualbox
   - users.admins
   - packages.sudo
   - packages.salt-minion
@@ -12,7 +11,7 @@ include:
   - packages.unison
   - packages.java
   - packages.screen
-  {% if grains['fqdn'][0] == 'w' -%}
+  {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'framework.localdomain' -%}
   - packages.thunderbird
   - packages.chrome
   - packages.gimp
@@ -25,19 +24,19 @@ include:
   - packages.fedora-crap
   - packages.hplip-gui
   - packages.openssh-server
-  {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'tjc.localdomain' or grains['fqdn'] == 'kathy.localdomain' -%}
+  {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'tjc.localdomain' or grains['fqdn'] == 'kathy.localdomain' or grains['fqdn'] == 'framework.localdomain' -%}
   - packages.calibre
   {%- endif %}
-  {% if grains['fqdn'] == 'tjc.localdomain' -%}
+  {% if grains['fqdn'] == 'tjc.localdomain' or grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wgazelle.localdomain' -%}
   - packages.telegram-desktop
   - packages.discord
   {%- endif %}
-  {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'kieran.localdomain' or grains['fqdn'] == 'kathy.localdomain' -%}
+  {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'kieran.localdomain' or grains['fqdn'] == 'kathy.localdomain' or grains['fqdn'] == 'framework.localdomain' -%}
   - packages.steam
   {%- endif %}
   - packages.ntp
   - packages.totem
-  {% if grains['fqdn'] == 'wlaptop.localdomain' or grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'wthinkpad.localdomain' or grains['fqdn'] == 'wgazelle.localdomain' -%}
+  {% if grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wgazelle.localdomain' -%}
   - repos.skype
   - packages.skype
   {%- endif %}

@@ -1,3 +1,0 @@
-GoldenCheetah:
-  pkg:
-    - installed
