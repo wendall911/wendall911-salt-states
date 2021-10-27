@@ -1,4 +1,4 @@
-ntp:
+ntpsec:
   pkg:
     - installed
   service:
@@ -7,14 +7,14 @@ ntp:
     - enable: True
     - require:
       - file: /etc/localtime
-      - pkg: ntp
+      - pkg: ntpsec
     - watch:
       - file: /etc/localtime
-      - pkg: ntp
+      - pkg: ntpsec
 
 /etc/localtime:
   file.symlink:
     - target: /usr/share/zoneinfo/America/Los_Angeles
     - force: True
     - require:
-      - pkg: ntp
+      - pkg: ntpsec
