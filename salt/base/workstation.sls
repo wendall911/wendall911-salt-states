@@ -52,3 +52,12 @@ include:
     - user: root
     - group: root
     - mode: 644
+
+{% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'framework.localdomain' -%}
+/home/wendallc/tmp:
+  file.mknod:
+    - user: wendallc
+    - group: wendallc
+    - mode: 755
+    - makedirs: True
+{%- endif %}
