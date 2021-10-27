@@ -22,7 +22,7 @@
   ssh_auth:
     - present
     - user: {{ my_user }}
-    - source: salt://files/ssh/{{ my_user }}_id_dsa.pub
+    - source: salt://files/ssh/{{ my_user }}_id_rsa.pub
     - require:
       - user: {{ my_user }}
 
