@@ -22,7 +22,6 @@ include:
   - packages.barrier
   {%- endif %}
   - packages.fedora-crap
-  - packages.hplip-gui
   - packages.openssh-server
   {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'tjc.localdomain' or grains['fqdn'] == 'kathy.localdomain' or grains['fqdn'] == 'framework.localdomain' -%}
   - packages.calibre

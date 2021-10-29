@@ -1,3 +1,0 @@
-hplip-gui:
-  pkg:
-    - installed

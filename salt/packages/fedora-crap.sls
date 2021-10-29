@@ -25,3 +25,31 @@ devassistant:
 anaconda-live:
   pkg:
     - removed
+
+gnome-contacts:
+  pkg:
+    - removed
+
+gnome-weather:
+  pkg:
+    - removed
+
+gnome-maps:
+  pkg:
+    - removed
+
+rhythmbox:
+  pkg:
+    - removed
+
+gnome-tour:
+  pkg:
+    - removed
+
+cheese:
+  pkg:
+    - removed
+
+gnome-calendar:
+  pkg:
+    - removed
