@@ -26,7 +26,7 @@ include:
   {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'tjc.localdomain' or grains['fqdn'] == 'kathy.localdomain' or grains['fqdn'] == 'framework.localdomain' -%}
   - packages.calibre
   {%- endif %}
-  {% if grains['fqdn'] == 'tjc.localdomain' or grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wgazelle.localdomain' -%}
+  {% if grains['fqdn'] == 'tjc.localdomain' or grains['fqdn'] == 'framework.localdomain' -%}
   - packages.telegram-desktop
   - packages.discord
   {%- endif %}
@@ -35,7 +35,7 @@ include:
   {%- endif %}
   - packages.ntp
   - packages.totem
-  {% if grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wgazelle.localdomain' -%}
+  {% if grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'framework.localdomain' -%}
   - repos.skype
   - packages.skype
   {%- endif %}

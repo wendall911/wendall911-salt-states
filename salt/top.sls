@@ -20,8 +20,8 @@ base:
   'ashar.localdomain':
     - base.ashar
 
-  'wgazelle.localdomain':
-    - base.wgazelle
+  'alaptop.localdomain':
+    - base.alaptop
 
   'kieran.localdomain':
     - base.kieran

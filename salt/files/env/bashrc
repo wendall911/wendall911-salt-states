@@ -29,7 +29,7 @@ alias ssh-kathy='ssh 10.1.10.175'
 alias ssh-ashar='ssh 10.1.10.174'
 alias ssh-mediapc='ssh 10.1.10.100'
 alias ssh-saltmaster='ssh saltmaster.83864.com'
-alias ssh-wgazelle='ssh 10.1.10.247'
+alias ssh-alaptop='ssh 10.1.10.247'
 alias ssh-framework='ssh 10.1.10.249'
 alias ssh-wdesktop='ssh 10.1.10.250'
 
