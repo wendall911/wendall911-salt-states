@@ -1,5 +1,4 @@
 include:
-  - repos.flash
   - repos.google-chrome
   - repos.rpmfusion
   - users.admins
@@ -7,7 +6,6 @@ include:
   - packages.salt-minion
   - packages.gnome-tweak-tool
   - packages.fonts
-  - packages.flash-plugin
   - packages.unison
   - packages.java
   - packages.screen

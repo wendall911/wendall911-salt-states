@@ -25,3 +25,6 @@ base:
 
   'kieran.localdomain':
     - base.kieran
+
+  'aynur.localdomain':
+    - base.aynur
