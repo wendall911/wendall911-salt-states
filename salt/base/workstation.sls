@@ -17,7 +17,6 @@ include:
   - packages.pylint
   - packages.gnome-shell-extension-system-monitor-applet
   - packages.gnome-shell-extensions
-  - packages.barrier
   {%- endif %}
   - packages.fedora-crap
   - packages.openssh-server

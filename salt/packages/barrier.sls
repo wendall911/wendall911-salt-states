@@ -1,3 +1,0 @@
-barrier:
-  pkg:
-    - installed
