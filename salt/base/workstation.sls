@@ -32,10 +32,6 @@ include:
   {%- endif %}
   - packages.ntp
   - packages.totem
-  {% if grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'framework.localdomain' -%}
-  - repos.skype
-  - packages.skype
-  {%- endif %}
 /etc/dnf/dnf.conf:
   file.managed:
     - source: salt://files/dnf/dnf.conf
