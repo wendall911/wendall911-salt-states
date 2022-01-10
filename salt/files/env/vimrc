@@ -197,6 +197,14 @@ function! CompileJS()
     endif
 endfunction
 
+autocmd BufWriteCmd *.ts,*.tsx :call CompileTS()
+function! CompileTS()
+    if &modified
+        write
+        execute "!diff /dev/null <(/usr/bin/tsc % |& grep .)"
+    endif
+endfunction
+
 let javascript_enable_domhtmlcss=1
 
 " Command to convert current line into formatted json
@@ -211,3 +219,13 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " Set indent for javascript globally
 autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
+
+" Initialize plugin system
+call plug#begin()
+
+Plug 'yuezk/vim-js'
+Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'jparise/vim-graphql'
+
+call plug#end()
