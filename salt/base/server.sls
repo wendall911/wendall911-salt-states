@@ -5,6 +5,5 @@ include:
   - packages.ntp
   - packages.git
   - packages.salt-minion
-  - packages.httpd
   - packages.openssh-server
   - packages.screen

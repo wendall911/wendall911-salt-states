@@ -4,7 +4,6 @@ include:
   - users.admins
   - packages.sudo
   - packages.salt-minion
-  - packages.gnome-tweak-tool
   - packages.fonts
   - packages.unison
   - packages.java
@@ -15,8 +14,6 @@ include:
   - packages.gimp
   - packages.inkscape
   - packages.pylint
-  - packages.gnome-shell-extension-system-monitor-applet
-  - packages.gnome-shell-extensions
   {%- endif %}
   - packages.fedora-crap
   - packages.openssh-server
@@ -31,7 +28,6 @@ include:
   - packages.steam
   {%- endif %}
   - packages.ntp
-  - packages.totem
 /etc/dnf/dnf.conf:
   file.managed:
     - source: salt://files/dnf/dnf.conf

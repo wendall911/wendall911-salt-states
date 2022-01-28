@@ -1,4 +1,0 @@
-gnome-tweaks:
-  pkg:
-    - installed
-

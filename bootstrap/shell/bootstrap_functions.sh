@@ -16,6 +16,8 @@ add_priv_key() {
 
 
 add_user() {
+    dnf install -y openssl
+
     SSH_DIR=/home/$1/.ssh
     PASS=weonlyallowsshkeyaccess
     useradd -p `openssl passwd -1 $PASS` $1
