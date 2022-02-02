@@ -21,9 +21,11 @@ blueberry:
 nwg-panel:
   pkg:
     - installed
-    - fromrepo: rawhide
+    - sources:
+      - nwg-panel: salt://files/rpms/nwg-panel-0.6.1-1.fc35.noarch.rpm
 
 pamixer:
-  pkg.installed:
+  pkg:
+    - installed
     - sources:
       - pamixer: salt://files/rpms/pamixer-1.5-1.fc35.x86_64.rpm
