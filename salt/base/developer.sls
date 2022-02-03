@@ -7,6 +7,12 @@ include:
   - packages.utils
   - packages.sway-desktop
 
+## See https://wiki.archlinux.org/title/GNOME/Keyring#Automatically_change_keyring_password_with_user_password
+
+/etc/pam.d/passwd:
+  file.patch:
+    - source: salt://files/pam/passwd.patch
+
 /etc/pam.d/gdm-password:
   file.patch:
     - source: salt://files/pam/gdm-password.patch

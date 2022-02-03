@@ -1,0 +1,9 @@
+--- passwd.orig	2022-02-03 08:04:21.610103655 -0800
++++ passwd	2022-02-03 08:04:34.770200197 -0800
+@@ -1,5 +1,5 @@
+ #%PAM-1.0
+ # This tool only uses the password stack.
+ password   substack	system-auth
+--password   optional	pam_gnome_keyring.so use_authtok
++password   optional	pam_gnome_keyring.so use_authtok
+ password   substack	postlogin
