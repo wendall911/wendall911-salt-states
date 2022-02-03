@@ -10,7 +10,6 @@
 +PrintLastLog yes
 +TCPKeepAlive yes
 +ClientAliveInterval 30
-+PermitUserEnvironment yes
  
  # It is recommended to use pam_motd in /etc/pam.d/sshd instead of PrintMotd,
  # as it is more configurable and versatile than the built-in version.
