@@ -15,7 +15,7 @@ include:
   file.patch:
     - source: salt://files/sway/sway.desktop.patch
 
-/usr/share/wayland-sessions/sway-gnome.desktop:
+/usr/bin/sway-session:
   file.managed:
     - source: salt://files/sway/sway-session
     - user: root
