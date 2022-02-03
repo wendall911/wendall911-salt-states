@@ -1,0 +1,4 @@
+seahorse:
+  pkg:
+    - installed
+
