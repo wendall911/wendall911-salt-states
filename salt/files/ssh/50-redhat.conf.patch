@@ -1,0 +1,16 @@
+--- 50-redhat.conf.orig	2022-02-03 09:25:11.502422409 -0800
++++ 50-redhat.conf	2022-02-03 09:24:43.047198952 -0800
+@@ -14,7 +14,12 @@
+ 
+ UsePAM yes
+ 
+-X11Forwarding yes
++X11Forwarding no
++
++PrintLastLog yes
++TCPKeepAlive yes
++ClientAliveInterval 30
++PermitUserEnvironment yes
+ 
+ # It is recommended to use pam_motd in /etc/pam.d/sshd instead of PrintMotd,
+ # as it is more configurable and versatile than the built-in version.
