@@ -13,4 +13,9 @@ if [ "x$XDG_SESSION_TYPE" = "xwayland" ] &&
   fi
 fi
 
+export SWAY_STARTUP="$XDG_RUNTIME_DIR/sway-startup.$$.pipe"
+mkfifo "$SWAY_STARTUP"
 exec /usr/bin/sway
+read display wayland_display <"$SWAY_STARTUP"
+rm "$SWAY_STARTUP"
+export DISPLAY="$display" WAYLAND_DISPLAY="$wayland_display"
