@@ -1,0 +1,9 @@
+--- sway.desktop.orig	2022-02-03 07:41:42.512111879 -0800
++++ sway.desktop	2022-02-03 07:41:55.855210185 -0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+ Name=Sway
+ Comment=An i3-compatible Wayland compositor
+-Exec=sway
++Exec=sway-session
+ Type=Application
