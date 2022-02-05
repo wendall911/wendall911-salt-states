@@ -1,4 +1,4 @@
-google-chrome-repo:
+slack-repo:
   pkgrepo.managed:
     - humanname: Slack
     - baseurl: https://packagecloud.io/slacktechnologies/slack/fedora/21/x86_64
