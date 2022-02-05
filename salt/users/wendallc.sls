@@ -110,6 +110,17 @@
     - mode: 644
     - template: jinja
 
+{% for dir in '/sway', '/nwg-panel' %}
+/home/{{ my_user }}/.config{{dir}}:
+  file.directory:
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 755
+    - makedirs: True
+    - require:
+      - user: {{ my_user }}
+{% endfor %}
+
 /home/{{ my_user }}/.config/sway/config:
   file.managed:
     - source: salt://files/sway/config
