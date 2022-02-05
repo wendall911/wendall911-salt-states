@@ -10,7 +10,7 @@ wl-clipboard:
   pkg:
     - installed
 
-kanshi:
+wdisplays:
   pkg:
     - installed
 
@@ -29,6 +29,10 @@ pamixer:
     - installed
     - sources:
       - pamixer: salt://files/rpms/pamixer-1.5-1.fc35.x86_64.rpm
+
+i3status-rust:
+  pkg:
+    - installed
 
 ## See https://wiki.archlinux.org/title/GNOME/Keyring#Automatically_change_keyring_password_with_user_password
 

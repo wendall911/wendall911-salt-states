@@ -110,6 +110,38 @@
     - mode: 644
     - template: jinja
 
+/home/{{ my_user }}/.config/sway/config:
+  file.managed:
+    - source: salt://files/sway/config
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 644
+    - template: jinja
+    
+/home/{{ my_user }}/.config/sway/i3status_config.toml:
+  file.managed:
+    - source: salt://files/sway/i3status_config.toml
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 644
+    - template: jinja
+
+/home/{{ my_user }}/.config/nwg-panel/config:
+  file.managed:
+    - source: salt://files/nwg-panel/config
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 644
+    - template: jinja
+
+/home/{{ my_user }}/.config/nwg-panel/style.css:
+  file.managed:
+    - source: salt://files/nwg-panel/style.css
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 644
+    - template: jinja
+
 {% if grains['fqdn'] == 'build.83864.com' %}
 /home/{{ my_user }}/RPMBUILD_README:
   file.managed:

@@ -1,0 +1,36 @@
+theme = "plain"
+icons = "awesome"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{mem_used_percents}"
+format_swap = "{swap_used_percents}"
+
+[[block]]
+block = "cpu"
+interval = 1
+
+{% if grains['fqdn'] == 'framework.localdomain' -%}
+[[block]]
+block = "net"
+device = "enp0s20f0u4u1u4"
+format = "{speed_down;K*b} {graph_down;K*b}"
+interval = 5
+hide_inactive = true
+
+[[block]]
+block = "net"
+device = "wlp170s0"
+format = "{ssid} {signal_strength} {speed_down;K*b} {graph_down;K*b}"
+interval = 5
+hide_inactive = true
+
+{%- endif %}
+{% if grains['fqdn'] == 'wdesktop.localdomain' -%}
+block = "net"
+device = "enp6s0"
+format = "{ssid} {signal_strength} {speed_down;K*b} {graph_down;K*b}"
+interval = 5
+
+{%- endif %}
