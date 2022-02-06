@@ -1,4 +1,5 @@
 include:
+  - repos.copr
   - repos.google-chrome
   - repos.rpmfusion
   - users.admins

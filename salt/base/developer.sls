@@ -1,6 +1,5 @@
 include:
   - repos.slack
-  - repos.copr
   - packages.gcc
   - packages.meld
   - packages.git
