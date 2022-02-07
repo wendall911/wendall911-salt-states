@@ -67,7 +67,7 @@
         "items": [
           {
             "name": "Lock",
-            "cmd": "swaylock -f -c 000000"
+            "cmd": "killall -s SIGUSR1 swayidle && killall -s SIGUSR1 swayidle"
           },
           {
             "name": "Logout",
