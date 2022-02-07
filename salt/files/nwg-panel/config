@@ -1,7 +1,12 @@
 [
   {
     "name": "panel-top",
+{% if grains['fqdn'] == 'framework.localdomain' -%}
     "output": "eDP-1",
+{%- endif %}
+{% if grains['fqdn'] == 'wdesktop.localdomain' -%}
+    "output": "HDMI-A-1",
+{%- endif %}
     "layer": "bottom",
     "position": "top",
     "controls": "right",
@@ -26,9 +31,11 @@
     ],
     "controls-settings": {
       "components": [
+{% if grains['fqdn'] == 'framework.localdomain' -%}
         "brightness",
-        "volume",
-        "battery"
+        "battery",
+{%- endif %}
+        "volume"
       ],
       "commands": {
         "net": "",
@@ -105,8 +112,7 @@
       "all-outputs": false
     },
     "sway-workspaces": {
-      "numbers": [
-      ],
+      "numbers": [],
       "show-icon": true,
       "image-size": 16,
       "show-name": true,

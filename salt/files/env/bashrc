@@ -119,6 +119,6 @@ esac
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /home/wendallc/.config/yarn/global/node_modules/tabtab/.completions/sls.bash ] && . /home/wendallc/.config/yarn/global/node_modules/tabtab/.completions/sls.bash
 
-if [ "$XDG_SESSION_TYPE" == "tty" ];then
+if [ -f "~/.config/sway/session" ] && [ "$XDG_SESSION_TYPE" == "tty" ];then
     . ~/.config/sway/session
 fi
