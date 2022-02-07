@@ -77,8 +77,9 @@ exec --no-startup-id mako
 exec nm-applet --indicator
 exec blueberry-tray
 
-# Start some programs in fixed worspaces
-assign [app_id="firefox"] → 2
+# Start some programs in fixed workspaces
+for_window [class="Firefox" window_role="browser"] layout tabbed
+assign [app_id="firefox"] → 1
 exec "env MOZ_ENABLE_WAYLAND=1 firefox"
 #
 exec_always nwg-panel
