@@ -85,7 +85,7 @@ exec_always nwg-panel
 
 exec export gnome-keyring-daemon --start
 
-exec focus output HDMI-A-1
+exec swaymsg focus output HDMI-A-1
 
 # Remove pipe
 exec rm "$SWAY_STARTUP"
@@ -171,7 +171,6 @@ exec echo "export WAYLAND_DISPLAY=$WAYLAND_DISPLAY" >> ~/.config/sway/session
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 
-
     {% if grains['fqdn'] == 'wdesktop.localdomain' -%}
     workspace 1 output HDMI-A-1
     workspace 2 output HDMI-A-2
@@ -184,108 +183,6 @@ exec echo "export WAYLAND_DISPLAY=$WAYLAND_DISPLAY" >> ~/.config/sway/session
     workspace 9 output DP-2
     workspace 10 output DP-2
     {%- endif %}
-
-### Idle configuration
-#
-# Example configuration:
-#
-exec swayidle -w \
-         timeout 3000 'swaylock -f -c 000000' \
-         timeout 9000 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
-
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-
-### Input configuration
-{% if grains['fqdn'] == 'framework.localdomain' -%}
-input 2362:628:PIXA3854:00_093A:0274_Touchpad {
-    tap enabled
-    natural_scroll enabled
-}
-{%- endif %}
-
-input "type:keyboard" {
-    xkb_options caps:escape
-}
-
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
-
-### Autostart
-exec --no-startup-id mako
-exec nm-applet --indicator
-exec blueberry-tray
-
-# Start some programs in fixed worspaces
-assign [app_id="firefox"] → 1
-exec "env MOZ_ENABLE_WAYLAND=1 firefox"
-
-exec_always nwg-panel
-
-exec export gnome-keyring-daemon --start
-
-# Remove pipe
-exec rm "$SWAY_STARTUP"
-
-# Setup session for remote
-exec echo "export DISPLAY=$DISPLAY" > ~/.config/sway/session
-exec echo "export WAYLAND_DISPLAY=$WAYLAND_DISPLAY" >> ~/.config/sway/session
-
-## Key bindings
-#
-# Basics:
-#
-    # Start a terminal
-    bindsym $mod+Return exec $term
-
-    # Kill focused window
-    bindsym $mod+Shift+q kill
-
-    # Start your launcher
-    bindsym $mod+d exec $menu
-
-    # Drag floating windows by holding down $mod and left mouse button.
-    # Resize them with right mouse button + $mod.
-    # Despite the name, also works for non-floating windows.
-    # Change normal to inverse to use left mouse button for resizing and right
-    # mouse button for dragging.
-    floating_modifier $mod normal
-
-    # Reload the configuration file
-    bindsym $mod+Shift+c reload
-
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
-#
-# Moving around:
-#
-    # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
-    # Or use $mod+[up|down|left|right]
-    bindsym $mod+Left focus left
-    bindsym $mod+Down focus down
-    bindsym $mod+Up focus up
-    bindsym $mod+Right focus right
-
-    # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
-    # Ditto, with arrow keys
-    bindsym $mod+Shift+Left move left
-    bindsym $mod+Shift+Down move down
-    bindsym $mod+Shift+Up move up
-    bindsym $mod+Shift+Right move right
-#
-# Workspaces:
-#
-    # Switch to
 #
 # Layout stuff:
 #
