@@ -1,0 +1,17 @@
+[Unit]
+Description=GNOME RFKill support service
+CollectMode=inactive-or-failed
+RefuseManualStart=true
+RefuseManualStop=true
+After=graphical.target
+
+[Service]
+Slice=session.slice
+Type=dbus
+ExecStart=/usr/libexec/gsd-rfkill
+Restart=on-failure
+BusName=org.gnome.SettingsDaemon.Rfkill
+TimeoutStopSec=5
+
+[Install]
+WantedBy=default.target
