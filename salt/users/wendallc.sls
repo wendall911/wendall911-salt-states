@@ -153,6 +153,13 @@
     - mode: 644
     - template: jinja
 
+/home/{{ my_user }}/.config/alacritty/alacritty.yml:
+  file.managed:
+    - source: salt://files/alacritty/alacritty.yml
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 644
+
 {% if grains['fqdn'] == 'build.83864.com' %}
 /home/{{ my_user }}/RPMBUILD_README:
   file.managed:

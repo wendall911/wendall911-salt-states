@@ -75,7 +75,6 @@ input "type:keyboard" {
 ### Autostart
 exec --no-startup-id mako
 exec nm-applet --indicator
-exec blueberry-tray
 
 # Start some programs in fixed workspaces
 for_window [class="Firefox" window_role="browser"] layout tabbed
