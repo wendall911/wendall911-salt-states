@@ -1,0 +1,5 @@
+## User service starting - Not able to do automatically with saltstack
+
+$ systemctl --user enable sway-gsd-rfkill.service
+$ systemctl --user daemon-reload
+$ systemctl --user start sway-gsd-rfkill
