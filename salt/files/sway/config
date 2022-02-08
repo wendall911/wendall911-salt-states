@@ -87,6 +87,9 @@ exec export gnome-keyring-daemon --start
 
 exec swaymsg focus output HDMI-A-1
 
+## Setup dbus stuff for gnome-control-center
+exec /usr/libexec/gsd-rfkill org.gnome.SettingsDaemon.Rfkill
+
 # Remove pipe
 exec rm "$SWAY_STARTUP"
 

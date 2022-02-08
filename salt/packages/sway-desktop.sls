@@ -14,10 +14,6 @@ wdisplays:
   pkg:
     - installed
 
-blueberry:
-  pkg:
-    - installed
-
 nwg-panel:
   pkg:
     - installed

@@ -58,7 +58,17 @@
         {
           "name": "Bluetooth",
           "icon": "bluetooth-active",
-          "cmd": "blueberry"
+          "cmd": "gnome-control-center bluetooth"
+        },
+        {
+          "name": "Network",
+          "icon": "network-wired",
+          "cmd": "gnome-control-center network"
+        },
+        {
+          "name": "Wifi",
+          "icon": "network-wireless",
+          "cmd": "gnome-control-center wifi"
         }
       ],
       "menu": {
