@@ -77,7 +77,7 @@ exec --no-startup-id mako
 exec nm-applet --indicator
 
 # Start some programs in fixed workspaces
-for_window [class="Firefox" window_role="browser"] layout tabbed
+for_window [app_id="firefox"] layout tabbed
 assign [app_id="firefox"] → 1
 exec "env MOZ_ENABLE_WAYLAND=1 firefox"
 #
