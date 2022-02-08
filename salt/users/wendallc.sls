@@ -110,7 +110,7 @@
     - mode: 644
     - template: jinja
 
-{% for dir in '/sway', '/nwg-panel' %}
+{% for dir in '/sway', '/nwg-panel', 'alacritty' %}
 /home/{{ my_user }}/.config{{dir}}:
   file.directory:
     - user: {{ my_user }}
