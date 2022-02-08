@@ -110,6 +110,22 @@
     - mode: 644
     - template: jinja
 
+/home/{{ my_user }}/.local/share/systemd/user:
+  file.directory:
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 755
+    - makedirs: True
+    - require:
+      - user: {{ my_user }}
+
+/home/{{ my_user }}/.local/share/systemd/user/sway-gsd-rfkill.service:
+  file.managed:
+    - source: salt://files/sway/sway-gsd-rfkill.service
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 644
+
 {% for dir in '/sway', '/nwg-panel', '/alacritty' %}
 /home/{{ my_user }}/.config{{dir}}:
   file.directory:
