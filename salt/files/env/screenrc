@@ -2,5 +2,5 @@ defutf8 on
 caption always "%{= kK} %{K}%-w%{+b w}%51>%n %t%{= K}%+w%<%-=%{= kK} {{grains['host']}}| %{w}20%y-%m-%d %{w}%0c:%s %{-}"
 shelltitle '$ |$'
 defscrollback 10000
-termcap xterm-256color|xterm|xterms|xs ti=\E7\E[?47l
-terminfo xterm-256color|xterm|xterms|xs ti=\E7\E[?47l
+termcap xterm-256color|xterm|xterms|xs|alacritty ti=\E7\E[?47l
+terminfo xterm-256color|xterm|xterms|xs|alacritty ti=\E7\E[?47l
