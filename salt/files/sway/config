@@ -94,6 +94,9 @@ exec rm "$SWAY_STARTUP"
 exec echo "export DISPLAY=$DISPLAY" > ~/.config/sway/session
 exec echo "export WAYLAND_DISPLAY=$WAYLAND_DISPLAY" >> ~/.config/sway/session
 
+# Start gsd-rfkill service when sway starts
+exec systemctl --user restart sway-gsd-rfkill
+
 ## Key bindings
 #
 # Basics:
