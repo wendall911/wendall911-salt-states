@@ -27,6 +27,8 @@
       "clock"
     ],
     "modules-right": [
+      "button-send-paste",
+      "button-file-manager",
       "tray"
     ],
     "controls-settings": {
@@ -158,10 +160,36 @@
       "title-limit": 55
     },
     "tray": {
+{% if grains['fqdn'] == 'framework.localdomain' -%}
       "icon-size": 8,
+{%- endif %}
+{% if grains['fqdn'] == 'wdesktop.localdomain' -%}
+      "icon-size": 16,
+{%- endif %}
       "root-css-name": "tray",
       "inner-css-name": "inner-tray",
       "smooth-scrolling-threshold": 0
+    },
+    "button-send-paste": {
+{% if grains['fqdn'] == 'framework.localdomain' -%}
+      "command": "send-clipboard 10.1.10.250",
+{%- endif %}
+{% if grains['fqdn'] == 'wdesktop.localdomain' -%}
+      "command": "send-clipboard 10.1.10.249",
+{%- endif %}
+      "icon": "go-down",
+      "label": "",
+      "label-position": "right",
+      "css-name": "",
+      "icon-size": 16
+    },
+    "button-file-manager": {
+      "command": "nautilus",
+      "icon": "document-open",
+      "label": "",
+      "label-position": "right",
+      "css-name": "",
+      "icon-size": 16
     }
   }
 ]
