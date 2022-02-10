@@ -65,10 +65,10 @@
         "scroll-step": 3, // %, can be a float
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon}",
-        "format-bluetooth-muted": "{volume}% {icon}",
-        "format-muted": "0% {icon}",
+        "format-bluetooth-muted": "{volume}%  ",
+        "format-muted": "0% ",
         "format-source": "",
-        "format-source-muted": "0% {icon}",
+        "format-source-muted": "0%  ",
         "format-icons": {
             "headphone": "",
             "hands-free": "",

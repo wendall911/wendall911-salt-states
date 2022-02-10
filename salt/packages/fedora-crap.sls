@@ -49,7 +49,3 @@ gnome-tour:
 cheese:
   pkg:
     - removed
-
-gnome-calendar:
-  pkg:
-    - removed
