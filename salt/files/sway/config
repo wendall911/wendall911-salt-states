@@ -23,7 +23,9 @@ set $menu dmenu_path | wofi --show drun -i --gtk-dark | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/default.png fill
+output * bg ~/.config/sway/background.jpg fill
+
+exec gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 #
 # Example configuration:
 #
