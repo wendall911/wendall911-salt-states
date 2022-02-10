@@ -126,8 +126,8 @@
     - group: {{ my_user }}
     - mode: 644
 
-{% for dir in '/sway', '/nwg-panel', '/alacritty' %}
-/home/{{ my_user }}/.config{{dir}}:
+{% for dir in 'sway', 'wlogout', 'alacritty', 'waybar' %}
+/home/{{ my_user }}/.config/{{ dir }}:
   file.directory:
     - user: {{ my_user }}
     - group: {{ my_user }}
@@ -144,30 +144,25 @@
     - group: {{ my_user }}
     - mode: 644
     - template: jinja
-    
-/home/{{ my_user }}/.config/sway/i3status_config.toml:
-  file.managed:
-    - source: salt://files/sway/i3status_config.toml
-    - user: {{ my_user }}
-    - group: {{ my_user }}
-    - mode: 644
-    - template: jinja
 
-/home/{{ my_user }}/.config/nwg-panel/config:
+{% for file in 'layout', 'style.css' %}
+/home/{{ my_user }}/.config/wlogout/{{ file }}:
   file.managed:
-    - source: salt://files/nwg-panel/config
+    - source: salt://files/wlogout/{{ file }}
     - user: {{ my_user }}
     - group: {{ my_user }}
     - mode: 644
-    - template: jinja
+{% endfor %}
 
-/home/{{ my_user }}/.config/nwg-panel/style.css:
+{% for file in 'config', 'style.css' %}
+/home/{{ my_user }}/.config/waybar/{{ file }}:
   file.managed:
-    - source: salt://files/nwg-panel/style.css
+    - source: salt://files/waybar/{{ file }}
     - user: {{ my_user }}
     - group: {{ my_user }}
     - mode: 644
     - template: jinja
+{% endfor %}
 
 /home/{{ my_user }}/.config/alacritty/alacritty.yml:
   file.managed:

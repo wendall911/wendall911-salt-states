@@ -1,0 +1,141 @@
+[
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+    "modules-left": ["sway/workspaces","sway/window"],
+    "modules-center": ["clock"],
+{% if grains['fqdn'] == 'wdesktop.localdomain' -%}
+    "output": "!HDMI-A-1",
+{%- endif %}
+{% if grains['fqdn'] == 'framework.localdomain' -%}
+    "output": "!eDP-1",
+{%- endif %}
+    "sway/workspaces": {
+        "all-outputs": false,
+    },
+    "clock": {
+        "format": "{:%a %b %d %l:%M %p}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "on-click": "gnome-calendar",
+    },
+},
+{
+{% if grains['fqdn'] == 'wdesktop.localdomain' -%}
+    "output": "HDMI-A-1",
+{%- endif %}
+{% if grains['fqdn'] == 'framework.localdomain' -%}
+    "output": "eDP-1",
+{%- endif %}
+    "height": 30, // Waybar height (to be removed for auto height)
+    "spacing": 4, // Gaps between modules (4px)
+    "modules-left": ["sway/workspaces", "sway/window"],
+    "modules-center": [ "clock"],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "bluetooth",
+        "cpu",
+        "memory",
+{% if grains['fqdn'] == 'framework.localdomain' -%}
+        "temperature",
+        "backlight",
+        "battery",
+{%- endif %}
+        "tray",
+        "custom/wlogout",
+    ],
+    // Modules configuration
+    "sway/workspaces": {
+        "all-outputs": false,
+    },
+    "sway/window": {
+        "format": "{}",
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "🌎 $1",
+        }
+    },
+    "clock": {
+        "format": "{:%a %b %d %l:%M %p}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "on-click": "gnome-calendar",
+    },
+    "pulseaudio": {
+        "scroll-step": 3, // %, can be a float
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": "{volume}% {icon}",
+        "format-muted": "0% {icon}",
+        "format-source": "",
+        "format-source-muted": "0% {icon}",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pamixer -t",
+        "on-click-right": "gnome-control-center sound"
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "🖧",
+        "tooltip-format": "{ipaddr} 🖧",
+        "format-disconnected": "⚠",
+        "on-click": "gnome-control-center network",
+    },
+    "bluetooth": {
+        "format": "{icon}",
+        "format-icons": {
+            "enabled": "BT",
+            "disabled": ""
+        },
+        "tooltip-format": "{}",
+        "on-click": "gnome-control-center bluetooth",
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false,
+        "on-click": "alacritty -e top",
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureF}°F {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["🔅", "🔆"],
+        "on-scroll-up": "light -A 2",
+        "on-scroll-down": "light -U 2",
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "on-click": "gnome-control-center battery",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "custom/wlogout": {
+        "on-click": "wlogout -b 2",
+        "format": "  ⏻  {}",
+        "tooltip": false,
+    },
+}
+]

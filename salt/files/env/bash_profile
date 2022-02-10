@@ -11,7 +11,7 @@ PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/.node_modules/bin:$HOME/.cargo/bin
 
 export PATH
 
-if [ "$DESKTOP_SESSION" == "sway" ];then
+if [ "$DESKTOP_SESSION" == "sway" ]; then
     eval $(gnome-keyring-daemon --start)
     export SSH_AUTH_SOCK
 fi

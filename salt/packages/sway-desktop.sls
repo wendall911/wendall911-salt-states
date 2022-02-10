@@ -10,32 +10,29 @@ wl-clipboard:
   pkg:
     - installed
 
-wdisplays:
+wofi:
   pkg:
     - installed
 
-nwg-panel:
-  pkg:
-    - installed
-    - sources:
-      - nwg-panel: salt://files/rpms/nwg-panel-0.6.1-1.fc35.noarch.rpm
-
-pamixer:
-  pkg:
-    - installed
-    - sources:
-      - pamixer: salt://files/rpms/pamixer-1.5-1.fc35.x86_64.rpm
-
-i3status-rust:
+waybar:
   pkg:
     - installed
 
-network-manager-applet:
+wlogout:
+  pkg:
+    - installed
+
+{% if grains['fqdn'] == 'framework.localdomain' -%}
+light:
+  pkg:
+    - installed
+{%- endif %}
+
+fontawesome5-fonts:
   pkg:
     - installed
 
 ## See https://wiki.archlinux.org/title/GNOME/Keyring#Automatically_change_keyring_password_with_user_password
-
 /etc/pam.d/passwd:
   file.patch:
     - source: salt://files/pam/passwd.patch

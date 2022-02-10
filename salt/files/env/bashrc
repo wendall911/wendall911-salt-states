@@ -112,6 +112,12 @@ screen*)
     ;;
 esac
 
+case ${TERM} in
+    alacritty)
+        PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
+        ;;
+esac
+
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [ -f /home/wendallc/.config/yarn/global/node_modules/tabtab/.completions/serverless.bash ] && . /home/wendallc/.config/yarn/global/node_modules/tabtab/.completions/serverless.bash

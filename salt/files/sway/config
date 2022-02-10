@@ -18,7 +18,7 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu dmenu_path | wofi --show drun -i --gtk-dark | xargs swaymsg exec --
 
 ### Output configuration
 #
@@ -35,6 +35,8 @@ default_border pixel
 
 {% if grains['fqdn'] == 'framework.localdomain' -%}
 output eDP-1 scale 1.5
+# Set minimum brightness
+exec light -N 5
 {%- endif %}
 
 
@@ -73,15 +75,12 @@ input "type:keyboard" {
 # Read `man 5 sway-input` for more information about this section.
 
 ### Autostart
-exec --no-startup-id mako
-exec nm-applet --indicator
+exec mako
 
 # Start some programs in fixed workspaces
 for_window [app_id="firefox"] layout tabbed
 assign [app_id="firefox"] → 1
 exec "env MOZ_ENABLE_WAYLAND=1 firefox"
-#
-exec_always nwg-panel
 
 exec export gnome-keyring-daemon --start
 
@@ -255,21 +254,7 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 
 bar {
-    #swaybar_command waybar
-
-    position bottom
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    # status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
-
-    status_command i3status-rs ~/.config/sway/i3status_config.toml
-
-    #colors {
-    #    statusline #ffffff
-    #    background #323232
-    #    inactive_workspace #32323200 #32323200 #5c5c5c
-    #}
+    swaybar_command waybar
 }
 
 include /etc/sway/config.d/*
