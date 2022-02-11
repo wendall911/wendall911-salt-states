@@ -10,6 +10,12 @@ wl-clipboard:
   pkg:
     - installed
 
+pamixer:
+  pkg:
+    - installed
+    - sources:
+      - pamixer: salt://files/rpms/pamixer-1.5-1.fc35.x86_64.rpm
+
 wofi:
   pkg:
     - installed
