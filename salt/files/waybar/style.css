@@ -1,8 +1,8 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "Font Awesome 5";
-    font-size: 13px;
+    font-family: "Font Awesome 5 Free";
+    font-size: 14px;
     box-shadow: none;
     text-shadow: none;
     transition-duration: 0s;
@@ -40,7 +40,6 @@ window {
 #pulseaudio,
 #bluetooth
 {
-    font-size: 15px;
     margin: 0px 3px 0px 1px;
     min-width: 15px;
 }
