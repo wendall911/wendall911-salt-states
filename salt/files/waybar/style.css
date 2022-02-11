@@ -1,76 +1,101 @@
 * {
-	border:        none;
-	border-radius: 0;
-	font-family: "Font Awesome 5";
-	font-size:     13px;
-	box-shadow:    none;
-	text-shadow:   none;
-	transition-duration: 0s;
-	color:      #d5c4a1;
+    border: none;
+    border-radius: 0;
+    font-family: "Font Awesome 5";
+    font-size: 13px;
+    box-shadow: none;
+    text-shadow: none;
+    transition-duration: 0s;
+    color:#d5c4a1;
 }
 
 window {
-	font-weight:    bold;
-	color:          #d5c4a1;
+    font-weight: bold;
+    color: #d5c4a1;
     background-color: rgba(43, 48, 59, 0.7);
 }
 
 #workspaces {
-	margin: 0 5px;
+    margin: 0 5px;
 }
 
 #workspaces button {
-	padding:    0 4px;
+    padding: 0 4px;
 }
 
 #workspaces button.visible {
 }
 
 #workspaces button.focused {
-	background-color:       #458588;
+    background-color: #458588;
 }
 
-#battery, #network, #pulseaudio, #clock, #custom-power, #custom-qbitstats {
-	margin:     0px 3px 0px 1px;
-	min-width:  10px;
+#network,
+#cpu,
+#memory,
+#battery,
+#backlight,
+#clock,
+#custom-wlogout,
+#pulseaudio,
+#bluetooth
+{
+    font-size: 15px;
+    margin: 0px 3px 0px 1px;
+    min-width: 15px;
+}
+
+#cpu,
+#pulseaudio
+{
+    margin-left: 30px;
+}
+
+#tray {
+    margin: 0 30px 0 30px;
+    min-width: 60px;
+}
+
+#bluetooth {
+    color: #337ab7;
 }
 
 #clock {
-	margin:     0px 16px 0px 10px;
-	min-width:  10px;
+    margin: 0px 16px 0px 10px;
+    min-width: 10px;
 }
 
-#custom-power {
-	color:         #cc241d;
-}
-
-#custom-qbitstats {
-}
-
+#network.ethernet,
+#network.wifi,
 #battery {
-	color:       #689d6a;
+    color: #689d6a;
 }
 
+#pulseaudio.muted,
+#memory.critical,
+#cpu.critical,
 #battery.critical {
-	color:          #fb4934;
+    color: #fb4934;
 }
 
+#memory.good,
+#cpu.good,
+#temperature,
 #battery.good {
-	color:          #689d6a;
+    color: #689d6a;
 }
 
+#memory.warning,
+#cpu.warning,
 #battery.charging {
-	color:      #b8bb26;
+    color:#b8bb26;
 }
 
-#network.wifi {
-	color:          #689d6a;
-}
-
+#temperature.critical,
 #network.disconnected {
-	color:          #fe8019;
+    color: #fe8019;
 }
 
 #waybar > box:nth-child(2) > box:nth-child(3) > * > label {
-        padding: 0 3px;
+  padding: 0 3px;
 }

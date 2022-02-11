@@ -31,19 +31,24 @@
     "height": 30, // Waybar height (to be removed for auto height)
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["sway/workspaces", "sway/window"],
-    "modules-center": [ "clock"],
+    "modules-center": [
+        "clock",
+        "tray",
+    ],
     "modules-right": [
-        "pulseaudio",
         "network",
         "bluetooth",
         "cpu",
         "memory",
 {% if grains['fqdn'] == 'framework.localdomain' -%}
         "temperature",
-        "backlight",
         "battery",
+
 {%- endif %}
-        "tray",
+        "pulseaudio",
+{% if grains['fqdn'] == 'framework.localdomain' -%}
+        "backlight",
+{%- endif %}
         "custom/wlogout",
     ],
     // Modules configuration
@@ -61,80 +66,86 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "on-click": "gnome-calendar",
     },
+    "tray": {
+        "spacing": 10
+    },
     "pulseaudio": {
         "scroll-step": 3, // %, can be a float
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-bluetooth-muted": "{volume}%  ",
-        "format-muted": "0% ",
+        "format": "{icon}",
+        "format-muted": "&#xf6a9;",
         "format-source": "",
-        "format-source-muted": "0%  ",
+        "format-source-muted": "&#xf6a9;",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "default": ["&#xf026;","&#xf027;","&#xf028;"]
         },
         "on-click": "pamixer -t",
         "on-click-right": "gnome-control-center sound"
     },
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "🖧",
-        "tooltip-format": "{ipaddr} 🖧",
-        "format-disconnected": "⚠",
+        "format-wifi": "&#xf1eb;",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "format-ethernet": "&#xf2b5;",
+        "tooltip-format": "{ipaddr}",
+        "format-disconnected": "&#xe060;",
         "on-click": "gnome-control-center network",
     },
     "bluetooth": {
         "format": "{icon}",
         "format-icons": {
-            "enabled": "BT",
-            "disabled": ""
+            "enabled": "<u>&#xf294;</u>",
+            "disabled": "&#xf294;"
         },
         "tooltip-format": "{}",
         "on-click": "gnome-control-center bluetooth",
     },
     "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false,
+        "format": "&#xf2db;",
+        "states": {
+            "critical": 90,
+            "warning": 50,
+            "good": 1
+        },
         "on-click": "alacritty -e top",
     },
     "memory": {
-        "format": "{}% "
+        "states": {
+            "critical": 95,
+            "warning": 50,
+            "good": 1
+        },
+        "tooltip-format": "{percentage}% {used:0.1f}G / {total:0.1f}G",
+        "format": "&#xf538;",
     },
     "temperature": {
-        "critical-threshold": 80,
-        "format": "{temperatureF}°F {icon}",
-        "format-icons": ["", "", ""]
+        "critical-threshold": 55,
+        "format": "{icon}",
+        "tooltip-format": "{temperatureF}°F / {temperatureC}°C",
+        "format-icons": ["&#xf2c7;"],
     },
     "backlight": {
-        "format": "{percent}% {icon}",
-        "format-icons": ["🔅", "🔆"],
+        "format": "{icon}",
+        "format-icons": ["🌑", "🌒", "🌓", "🌔", "🌕"],
+        "rotate": 360,
         "on-scroll-up": "light -A 2",
         "on-scroll-down": "light -U 2",
     },
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "on-click": "gnome-control-center battery",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10
+        "format": "{icon}",
+        "format-charging": "&#xf5e7;",
+        "format-plugged": "&#xf1e6;",
+        "on-click": "gnome-control-center power",
+        "format-icons": ["&#xf244;", "&#xf243;", "&#xf242;", "&#xf241;", "&#xf240;"],
+        "tooltip-format": "{capacity}%",
     },
     "custom/wlogout": {
-        "on-click": "wlogout -b 2",
-        "format": "  ⏻  {}",
+        "exec-on-event": false,
+        "on-click": "sh -c '(sleep 0.5s; wlogout -b 2)' & disown",
+        "format": "&#xf011;",
         "tooltip": false,
     },
 }
