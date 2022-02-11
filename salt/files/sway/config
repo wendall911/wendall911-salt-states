@@ -175,8 +175,7 @@ exec systemctl --user restart sway-gsd-rfkill
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
-
-    {% if grains['fqdn'] == 'wdesktop.localdomain' -%}
+{% if grains['fqdn'] == 'wdesktop.localdomain' -%}
     workspace 1 output HDMI-A-1
     workspace 2 output HDMI-A-2
     workspace 3 output DP-2
@@ -187,7 +186,7 @@ exec systemctl --user restart sway-gsd-rfkill
     workspace 8 output DP-2
     workspace 9 output DP-2
     workspace 10 output DP-2
-    {%- endif %}
+{%- endif %}
 #
 # Layout stuff:
 #
@@ -249,6 +248,23 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+bindsym Print exec grimshot --notify save output
+bindsym $mod+Print exec grimshot --notify save area
+
+bindsym --locked XF86MonBrightnessDown exec light -U 5
+bindsym --locked XF86MonBrightnessUp exec light -A 5
+
+bindsym --locked XF86AudioMute exec pamixer -t
+bindsym --locked XF86AudioLowerVolume exec pamixer -d 5
+bindsym --locked XF86AudioRaiseVolume exec pamixer -i 5
+
+{% if grains['fqdn'] == 'wdesktop.localdomain' -%}
+bindsym --locked $mod+p exec send-clipboard 10.1.10.249
+{%- endif %}
+{% if grains['fqdn'] == 'framework.localdomain' -%}
+bindsym --locked $mod+p exec send-clipboard 10.1.10.250
+{%- endif %}
 
 #
 # Status Bar:

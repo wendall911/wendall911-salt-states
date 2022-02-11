@@ -1,0 +1,2 @@
+#!/bin/bash
+wl-paste | ssh $1 wl-copy -o

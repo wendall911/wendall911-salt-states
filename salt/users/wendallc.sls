@@ -18,6 +18,25 @@
     - require:
       - user: {{ my_user }}
 
+/home/{{ my_user }}/bin:
+  file.directory:
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 755
+    - makedirs: True
+    - require:
+      - user: {{ my_user }}
+grimshot  send-clipboard  vimv
+
+{% for file in 'grimshot', 'send-clipboard', 'vimv' %}
+/home/{{ my_user }}/bin/{{ file }}:
+  file.managed:
+    - source: salt://files/bin/{{ file }}
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 775
+{% endfor %}
+
 {{ my_user }}_ssh:
   ssh_auth:
     - present
