@@ -26,7 +26,6 @@
     - makedirs: True
     - require:
       - user: {{ my_user }}
-grimshot  send-clipboard  vimv
 
 {% for file in 'grimshot', 'send-clipboard', 'vimv' %}
 /home/{{ my_user }}/bin/{{ file }}:
