@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "Font Awesome 5 Free";
+    font-family: "Font Awesome 5";
     font-size: 14px;
     box-shadow: none;
     text-shadow: none;
@@ -35,11 +35,11 @@ window {
 #memory,
 #battery,
 #backlight,
-#clock,
 #custom-wlogout,
 #pulseaudio,
 #bluetooth
 {
+    font-family: "Font Awesome 5 Free";
     margin: 0px 3px 0px 1px;
     min-width: 15px;
 }
@@ -62,6 +62,7 @@ window {
 #clock {
     margin: 0px 16px 0px 10px;
     min-width: 10px;
+    color: #FFFFFF;
 }
 
 #network.ethernet,
