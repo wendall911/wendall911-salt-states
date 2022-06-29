@@ -28,6 +28,10 @@ wlogout:
   pkg:
     - installed
 
+wf-recorder:
+  pkg:
+    - installed
+
 {% if grains['fqdn'] == 'framework.localdomain' -%}
 light:
   pkg:
