@@ -16,7 +16,7 @@
         "all-outputs": false,
     },
     "clock": {
-        "format": "{:%a %b %d %l:%M %p}",
+        "format": "{:%a %b %d %OI:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "on-click": "gnome-calendar",
     },
@@ -62,7 +62,7 @@
         }
     },
     "clock": {
-        "format": "{:%a %b %d %l:%M %p}",
+        "format": "{:%a %b %d %OI:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "on-click": "gnome-calendar",
     },
@@ -90,12 +90,8 @@
         "on-click": "gnome-control-center network",
     },
     "bluetooth": {
-        "format": "{icon}",
-        "format-icons": {
-            "enabled": "<u>&#xf294;</u>",
-            "disabled": "&#xf294;"
-        },
-        "tooltip-format": "{}",
+        "format-on": "<u>&#xf294;</u>",
+        "format-disabled": "&#xf294;",
         "on-click": "gnome-control-center bluetooth",
     },
     "cpu": {
