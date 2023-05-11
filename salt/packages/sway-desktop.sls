@@ -50,6 +50,18 @@ slurp:
   pkg:
     - installed
 
+nm-connection-editor:
+  pkg:
+    - installed
+
+blueman:
+  pkg:
+    - installed
+
+pavucontrol:
+  pkg:
+    - installed
+
 ## See https://wiki.archlinux.org/title/GNOME/Keyring#Automatically_change_keyring_password_with_user_password
 /etc/pam.d/passwd:
   file.patch:
