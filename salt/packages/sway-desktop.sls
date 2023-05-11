@@ -14,7 +14,7 @@ pamixer:
   pkg:
     - installed
     - sources:
-      - pamixer: salt://files/rpms/pamixer-1.5-1.fc35.x86_64.rpm
+      - pamixer: salt://files/rpms/pamixer-1.6-1.fc38.x86_64.rpm
 
 wofi:
   pkg:
