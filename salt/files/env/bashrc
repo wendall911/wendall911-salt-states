@@ -16,6 +16,7 @@ export LANG='en_US.utf-8'
 export EDITOR=/usr/bin/vim
 export FIGNORE=.svn:.git
 export _JAVA_AWT_WM_NONREPARENTING=1
+export GTK_USE_PORTAL=0
 
 alias l='ls -a --color'
 alias ll='ls -lFNBph --color'
