@@ -19,3 +19,4 @@ exec /usr/bin/sway
 read display wayland_display <"$SWAY_STARTUP"
 rm "$SWAY_STARTUP"
 export DISPLAY="$display" WAYLAND_DISPLAY="$wayland_display"
+exec /usr/bin/dbus-update-activation-environment --all
