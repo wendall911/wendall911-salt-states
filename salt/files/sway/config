@@ -37,6 +37,12 @@ default_border pixel
 
 {% if grains['fqdn'] == 'framework.localdomain' -%}
 output eDP-1 scale 1.5
+{%- endif %}
+{% if grains['fqdn'] == 'wlaptop.localdomain' -%}
+output eDP-1 scale 1.2
+{%- endif %}
+
+{% if grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wlaptop.localdomain' -%}
 # Set minimum brightness
 exec light -N 5
 {%- endif %}
@@ -64,6 +70,12 @@ exec swayidle -w \
 ### Input configuration
 {% if grains['fqdn'] == 'framework.localdomain' -%}
 input 2362:628:PIXA3854:00_093A:0274_Touchpad {
+    tap enabled
+    natural_scroll enabled
+}
+{%- endif %}
+{% if grains['fqdn'] == 'wlaptop.localdomain' -%}
+input 1267:12642:ELAN0412:00_04F3:3162_Touchpad {
     tap enabled
     natural_scroll enabled
 }
