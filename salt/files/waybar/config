@@ -9,7 +9,7 @@
 {% if grains['fqdn'] == 'wdesktop.localdomain' -%}
     "output": "!HDMI-A-1",
 {%- endif %}
-{% if grains['fqdn'] == 'framework.localdomain' -%}
+{% if grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wlaptop.localdomain' -%}
     "output": "!eDP-1",
 {%- endif %}
     "sway/workspaces": {
@@ -25,7 +25,7 @@
 {% if grains['fqdn'] == 'wdesktop.localdomain' -%}
     "output": "HDMI-A-1",
 {%- endif %}
-{% if grains['fqdn'] == 'framework.localdomain' -%}
+{% if grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wlaptop.localdomain' -%}
     "output": "eDP-1",
 {%- endif %}
     "height": 30, // Waybar height (to be removed for auto height)
@@ -40,13 +40,13 @@
         "bluetooth",
         "cpu",
         "memory",
-{% if grains['fqdn'] == 'framework.localdomain' -%}
+{% if grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wlaptop.localdomain' -%}
         "temperature",
         "battery",
 
 {%- endif %}
         "pulseaudio",
-{% if grains['fqdn'] == 'framework.localdomain' -%}
+{% if grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wlaptop.localdomain' -%}
         "backlight",
 {%- endif %}
         "custom/wlogout",

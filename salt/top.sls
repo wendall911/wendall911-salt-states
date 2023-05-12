@@ -1,4 +1,7 @@
 base:
+  'wlaptop.localdomain':
+    - base.wlaptop
+
   'framework.localdomain':
     - base.framework
 

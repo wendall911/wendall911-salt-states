@@ -21,7 +21,7 @@ include:
   {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'tjc.localdomain' or grains['fqdn'] == 'kathy.localdomain' or grains['fqdn'] == 'framework.localdomain' -%}
   - packages.calibre
   {%- endif %}
-  {% if grains['fqdn'] == 'tjc.localdomain' or grains['fqdn'] == 'framework.localdomain' -%}
+  {% if grains['fqdn'] == 'tjc.localdomain' or grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wlaptop.localdomain' -%}
   - packages.telegram-desktop
   - packages.discord
   {%- endif %}

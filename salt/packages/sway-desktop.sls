@@ -32,7 +32,7 @@ wf-recorder:
   pkg:
     - installed
 
-{% if grains['fqdn'] == 'framework.localdomain' -%}
+{% if grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wlaptop.localdomain' -%}
 light:
   pkg:
     - installed

@@ -31,6 +31,7 @@ alias ssh-aynur='ssh 10.1.10.172'
 alias ssh-mediapc='ssh 10.1.10.100'
 alias ssh-saltmaster='ssh saltmaster.83864.com'
 alias ssh-kieran='ssh 10.1.10.247'
+alias ssh-wlaptop='ssh 10.1.10.248'
 alias ssh-framework='ssh 10.1.10.249'
 alias ssh-wdesktop='ssh 10.1.10.250'
 
