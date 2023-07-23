@@ -27,6 +27,7 @@ include:
   {%- endif %}
   {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'kieran.localdomain' or grains['fqdn'] == 'kathy.localdomain' or grains['fqdn'] == 'framework.localdomain' -%}
   - packages.steam
+  - packages.prismlauncher
   {%- endif %}
   - packages.ntp
 /etc/dnf/dnf.conf:

@@ -1,0 +1,3 @@
+prismlauncher:
+  pkg:
+    - installed
