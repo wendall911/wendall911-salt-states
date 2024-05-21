@@ -38,7 +38,7 @@ light:
     - installed
 {%- endif %}
 
-fontawesome5-fonts-all:
+fontawesome-fonts-all:
   pkg:
     - installed
 
