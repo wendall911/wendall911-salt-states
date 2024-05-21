@@ -30,12 +30,17 @@ include:
   - packages.prismlauncher
   {%- endif %}
   - packages.ntp
+  {% if grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'framework.localdomain' -%}
+  - packages.keyd
+  {%- endif %}
+
 /etc/dnf/dnf.conf:
   file.managed:
     - source: salt://files/dnf/dnf.conf
     - user: root
     - group: root
     - mode: 644
+
 /etc/gdm/custom.conf:
   file.managed:
     - source: salt://files/gdm/custom.conf
