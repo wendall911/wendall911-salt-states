@@ -19,7 +19,7 @@ copr-prismlauncher-repo:
     - gpgkey: https://download.copr.fedorainfracloud.org/results/g3tchoo/prismlauncher/pubkey.gpg
     - gpgcheck: 1
 
-copr-keyd-repo
+copr-keyd-repo:
   pkgrepo.managed:
     - humanname: Copr repo for keyd owned by alternateved
     - baseurl: https://download.copr.fedorainfracloud.org/results/alternateved/keyd/fedora-$releasever-$basearch/
