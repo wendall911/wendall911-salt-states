@@ -3,7 +3,7 @@ salt-master:
     - installed
   service:
     - running
-    - enable: True
+    - enable: False
     - require:
       - file: /etc/salt/master
       - pkg: salt-master

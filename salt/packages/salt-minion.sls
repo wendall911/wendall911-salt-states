@@ -3,7 +3,7 @@ salt-minion:
     - installed
   service:
     - running
-    - enable: True
+    - enable: False
     - require:
       - file: /etc/salt/minion
       - pkg: salt-minion
