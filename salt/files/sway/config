@@ -90,6 +90,7 @@ input "type:keyboard" {
 
 ### Autostart
 exec mako
+exec lxpolkit
 
 # Start some programs in fixed workspaces
 for_window [app_id="firefox"] layout tabbed
