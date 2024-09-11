@@ -189,6 +189,13 @@
     - group: {{ my_user }}
     - mode: 644
 
+/home/{{ my_user }}/.config/alacritty/alacritty.toml:
+  file.managed:
+    - source: salt://files/alacritty/alacritty.toml
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 644
+
 {% if grains['fqdn'] == 'build.83864.com' %}
 /home/{{ my_user }}/RPMBUILD_README:
   file.managed:
