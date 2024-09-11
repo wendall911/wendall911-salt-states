@@ -12,11 +12,6 @@ hostnamectl set-hostname --pretty "${self.attr.pretty_name}"
 ${repos.fedora()}
 dnf install -y salt-minion
 
-# Patch for unpatched bug in 3005.1
-# https://github.com/saltstack/salt/issues/62851
-# Patch from gentoo project here: https://gitweb.gentoo.org/repo/gentoo.git/tree/app-admin/salt/files/salt-3005.1-importlib-metadata-5-r1.patch
-patch /usr/lib/python3.11/site-packages/salt/utils/entrypoints.py < salt-3005.1-importlib-metadata-5-r1.patch
-
 ${conf.saltminion()}
 ${users.wendallc()}
 
