@@ -17,3 +17,7 @@ unison253-text:
 unison-gtk:
   pkg:
     - installed
+
+unison:
+  pkg:
+    - installed
