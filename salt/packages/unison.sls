@@ -8,8 +8,12 @@ unison248-gtk:
 
 unison253-gtk:
   pkg:
-    - installed
+    - removed
 
 unison253-text:
+  pkg:
+    - removed
+
+unison-gtk:
   pkg:
     - installed

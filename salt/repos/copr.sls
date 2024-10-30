@@ -5,13 +5,6 @@ copr-i3status-rust-repo:
     - gpgkey: https://download.copr.fedorainfracloud.org/results/atim/i3status-rust/pubkey.gpg
     - gpgcheck: 1
 
-copr-unison-repo:
-  pkgrepo.managed:
-    - humanname: Copr repo for Unison owned by croadfeldt
-    - baseurl: https://download.copr.fedorainfracloud.org/results/croadfeldt/Unison/fedora-$releasever-$basearch/
-    - gpgkey: https://download.copr.fedorainfracloud.org/results/croadfeldt/Unison/pubkey.gpg
-    - gpgcheck: 1
-
 copr-prismlauncher-repo:
   pkgrepo.managed:
     - humanname: Copr repo for prismlauncher owned by g3tchoo
