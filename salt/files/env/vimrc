@@ -201,7 +201,7 @@ autocmd BufWriteCmd *.ts,*.tsx :call CompileTS()
 function! CompileTS()
     if &modified
         write
-        execute "!diff /dev/null <(/usr/bin/tsc % |& grep .)"
+        execute "!diff /dev/null <(/usr/bin/tsc --noEmit % |& grep .)"
     endif
 endfunction
 
