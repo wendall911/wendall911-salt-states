@@ -7,7 +7,7 @@ fi
 
 # User specific aliases and functions
 function rgrep() {
-    grep -IR --exclude-from=$HOME/.rgrep-excludes --exclude-dir={*\.git*,*\.svn*,*\.bzr*,*\.hg*,*js-min*,node_modules} --color $@ .
+    grep -IR --exclude-from=$HOME/.rgrep-excludes --exclude-dir={*\.git*,*\.svn*,*\.bzr*,*\.hg*,*js-min*,node_modules,.svelte-kit} --color $@ .
 }
 alias vi='vim'
 {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'framework.localdomain' -%}
