@@ -2,7 +2,7 @@ include:
   - repos.copr
   - repos.google-chrome
   - repos.rpmfusion
-  - repos.salt-minion
+  - repos.salt
   - users.admins
   - packages.sudo
   - packages.salt-minion
