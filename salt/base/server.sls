@@ -1,5 +1,4 @@
 include:
-  - users.admins
   - packages.epel
   - packages.sudo
   - packages.ntp
