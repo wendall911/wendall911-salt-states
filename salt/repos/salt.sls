@@ -4,5 +4,5 @@ salt-latest:
     - baseurl: https://packages.broadcom.com/artifactory/saltproject-rpm/
     - gpgkey: https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public
     - gpgcheck: 1
-    - exclude: *3006* *3008* *3009* *3010*
+    - exclude: ['*3006*', '*3008*', '*3009*', '*3010*']
     - skip_if_unavailable: True
