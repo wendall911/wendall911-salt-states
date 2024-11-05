@@ -8,4 +8,4 @@ sock_dir: /var/run/salt/master
 job_cache: True
 file_roots:
   base:
-    - /home/{{grains["host"]}}/wendall911-salt-states/salt/
+    - /home/{{grains["master"][::0]}}/wendall911-salt-states/salt/
