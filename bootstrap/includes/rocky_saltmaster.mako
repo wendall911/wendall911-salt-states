@@ -4,7 +4,6 @@
 <%namespace name="conf" file="/includes/conf.mako"/>\
 <%namespace name="repos" file="/includes/repos.mako"/>\
 
-${hosts.host_file(self.attr.machine_name, self.attr.domain, self.attr.ip_addr)}
 hostnamectl set-hostname --static ${self.attr.machine_name}.${self.attr.domain}
 
 ${repos.salt()}
