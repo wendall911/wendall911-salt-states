@@ -1,6 +1,10 @@
 nginx:
   pkg:
     - installed
+  service:
+    - running
+    - name: nginx
+    - enable: True
 
 certbot:
   pkg:

@@ -1,0 +1,12 @@
+[Unit]
+Description=Modrinth Badge Gunicorn Service
+After=network.target
+
+[Service]
+User=nginx
+Group=nginx
+WorkingDirectory=/srv/modrinth.roughness.technology
+ExecStart=gunicorn ModrinthBadge:api -c gunicorn.conf.py
+
+[Install]
+WantedBy=multi-user.target
