@@ -8,7 +8,7 @@ base:
   'wdesktop.localdomain':
     - base.wdesktop
 
-  'saltmaster.83864.com':
+  'saltmaster':
     - base.saltmaster
 
   'mediapc.localdomain':
