@@ -7,6 +7,8 @@ fi
 
 # User specific environment and startup programs
 
+{% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'framework.localdomain' -%}
+
 PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/.node_modules/bin:$HOME/.cargo/bin
 
 export PATH
@@ -15,3 +17,11 @@ if [ "$DESKTOP_SESSION" == "sway" ]; then
     eval $(gnome-keyring-daemon --start)
     export SSH_AUTH_SOCK
 fi
+
+{%- endif %}
+
+{% if grains['fqdn'] == 'saltmaster.83864.com' -%}
+
+export TERM=xterm
+
+{%- endif %}

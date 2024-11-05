@@ -1,15 +1,6 @@
 salt-master:
   pkg:
     - installed
-  service:
-    - running
-    - enable: False
-    - require:
-      - file: /etc/salt/master
-      - pkg: salt-master
-    - watch:
-      - file: /etc/salt/master
-      - pkg: salt-master
 
 /etc/salt/master:
   file.managed:

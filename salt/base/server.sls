@@ -1,7 +1,7 @@
 include:
   - packages.epel
+  - packages.nginx
   - packages.sudo
-  - packages.ntp
   - packages.git
   - packages.salt-minion
   - packages.openssh-server

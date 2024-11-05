@@ -5,6 +5,7 @@
 <%namespace name="repos" file="/includes/repos.mako"/>\
 
 hostnamectl set-hostname --static ${self.attr.machine_name}.${self.attr.domain}
+timedatectl set-timezone America/Los_Angeles
 
 ${repos.salt()}
 dnf install -y salt-master salt-minion git

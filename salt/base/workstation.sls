@@ -30,7 +30,6 @@ include:
   - packages.steam
   - packages.prismlauncher
   {%- endif %}
-  - packages.ntp
   {% if grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'framework.localdomain' -%}
   - packages.keyd
   {%- endif %}

@@ -196,12 +196,3 @@
     - group: {{ my_user }}
     - mode: 644
 
-{% if grains['fqdn'] == 'build.83864.com' %}
-/home/{{ my_user }}/RPMBUILD_README:
-  file.managed:
-    - source: salt://files/readme/rpmbuild.md
-    - user: {{ my_user }}
-    - group: {{ my_user }}
-    - mode: 644
-{% endif %}
-
