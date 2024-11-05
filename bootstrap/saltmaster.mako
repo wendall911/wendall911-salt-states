@@ -1,6 +1,6 @@
-<%inherit file="/includes/centos_amazon_saltmaster.mako" />\
+<%inherit file="/includes/rocky_saltmaster.mako" />\
 <%!
 machine_name = "saltmaster"
 domain = "83864.com"
-ip_addr = "104.236.162.153"
+ip_addr = "64.23.237.65"
 %>
