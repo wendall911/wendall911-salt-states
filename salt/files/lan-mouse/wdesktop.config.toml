@@ -1,6 +1,6 @@
 port = 4242
 
-[left]
+[right]
 hostname = "10.1.10.249"
 port = 4242
 activate_on_startup = true
