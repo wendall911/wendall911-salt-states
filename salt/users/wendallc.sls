@@ -144,7 +144,7 @@
     - group: {{ my_user }}
     - mode: 644
 
-{% for dir in 'sway', 'wlogout', 'alacritty', 'waybar' %}
+{% for dir in 'sway', 'wlogout', 'alacritty', 'waybar', 'lan-mouse' %}
 /home/{{ my_user }}/.config/{{ dir }}:
   file.directory:
     - user: {{ my_user }}
@@ -196,3 +196,25 @@
     - group: {{ my_user }}
     - mode: 644
 
+/home/{{ my_user }}/bin/lan-mouse
+  file.managed:
+    - source: salt://files/lan-mouse/lan-mouse
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 755
+
+/home/{{ my_user }}/.local/share/applications/lan-mouse.desktop:
+  file.managed:
+    - source: salt://files/lan-mouse/lan-mouse.desktop
+    - user: {{ my_user }}
+    - group: {{ my_group }}
+    - mode: 644
+
+{% if grains['fqdn'] == 'framework.localdomain' or grains['fqdn] == 'wdesktop.localdomain' -%}
+/home/{{ my_user }}/.config/lan-mouse/config.toml:
+  file.managed:
+    - source: salt://files/lan-mouse/{{ grains.fqdn.partition('.')[0] }}.config.toml
+    - user: {{ my_user }}
+    - group: {{ my_group }}
+    - mode: 644
+{%- endif %}

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Categories=Utility;
+Comment=Mouse & Keyboard sharing via LAN
+Exec=lan-mouse
+Name=Lan Mouse
+StartupNotify=true
+Terminal=false
+Type=Application
