@@ -207,7 +207,7 @@
   file.managed:
     - source: salt://files/lan-mouse/lan-mouse.desktop
     - user: {{ my_user }}
-    - group: {{ my_group }}
+    - group: {{ my_user }}
     - mode: 644
 
 {% if grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
@@ -215,6 +215,6 @@
   file.managed:
     - source: salt://files/lan-mouse/{{ grains.fqdn.partition('.')[0] }}.config.toml
     - user: {{ my_user }}
-    - group: {{ my_group }}
+    - group: {{ my_user }}
     - mode: 644
 {%- endif %}
