@@ -196,7 +196,7 @@
     - group: {{ my_user }}
     - mode: 644
 
-/home/{{ my_user }}/bin/lan-mouse
+/home/{{ my_user }}/bin/lan-mouse:
   file.managed:
     - source: salt://files/lan-mouse/lan-mouse
     - user: {{ my_user }}
