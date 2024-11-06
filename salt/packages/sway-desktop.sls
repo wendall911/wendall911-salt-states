@@ -13,8 +13,6 @@ wl-clipboard:
 pamixer:
   pkg:
     - installed
-    - sources:
-      - pamixer: salt://files/rpms/pamixer-1.6-1.fc38.x86_64.rpm
 
 wofi:
   pkg:
