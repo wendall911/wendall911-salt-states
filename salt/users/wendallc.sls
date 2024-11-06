@@ -210,7 +210,7 @@
     - group: {{ my_group }}
     - mode: 644
 
-{% if grains['fqdn'] == 'framework.localdomain' or grains['fqdn] == 'wdesktop.localdomain' -%}
+{% if grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
 /home/{{ my_user }}/.config/lan-mouse/config.toml:
   file.managed:
     - source: salt://files/lan-mouse/{{ grains.fqdn.partition('.')[0] }}.config.toml
