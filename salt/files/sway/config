@@ -51,7 +51,7 @@ exec light -N 5
 {% if grains['fqdn'] == 'wdesktop.localdomain' -%}
 output HDMI-A-1 pos 1920 0 res 1920x1080
 output DP-2 pos 1920 1080 res 1920x1080
-output HDMI-A-2 pos 0 1080 res 1920x1080
+output HDMI-A-2 pos 3840 500 res 1920x1080
 {%- endif %}
 
 ### Idle configuration
