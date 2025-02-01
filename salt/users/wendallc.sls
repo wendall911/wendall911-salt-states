@@ -144,16 +144,18 @@
     - group: {{ my_user }}
     - mode: 644
 
-{% for dir in 'sway', 'wlogout', 'alacritty', 'waybar', 'lan-mouse' %}
-/home/{{ my_user }}/.config/{{ dir }}:
-  file.directory:
-    - user: {{ my_user }}
-    - group: {{ my_user }}
-    - mode: 755
-    - makedirs: True
-    - require:
+{% if grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
+  {% for dir in 'sway', 'wlogout', 'alacritty', 'waybar', 'lan-mouse' %}
+  /home/{{ my_user }}/.config/{{ dir }}:
+    file.directory:
       - user: {{ my_user }}
-{% endfor %}
+      - group: {{ my_user }}
+      - mode: 755
+      - makedirs: True
+      - require:
+        - user: {{ my_user }}
+  {% endfor %}
+{%- endif %}
 
 /home/{{ my_user }}/.config/sway/config:
   file.managed:
