@@ -26,7 +26,7 @@ include:
   - packages.telegram-desktop
   - packages.discord
   {%- endif %}
-  {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'kieran.localdomain' or grains['fqdn'] == 'klaptop.localdomain' or grains['fqdn'] == 'kathy.localdomain' or grains['fqdn'] == 'framework.localdomain' -%}
+  {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'ashar.localdomain' or grains['fqdn'] == 'kieran.localdomain' or grains['fqdn'] == 'klaptop.localdomain' or grains['fqdn'] == 'tjc.localdomain' or grains['fqdn'] == 'framework.localdomain' -%}
   - packages.steam
   - packages.prismlauncher
   {%- endif %}
