@@ -48,8 +48,8 @@ exec light -N 5
 {%- endif %}
 
 
-# The following line is required, as wine/proton games with sway only work on the "primary" monitor
 {% if grains['fqdn'] == 'wdesktop.localdomain' -%}
+# The following line is required, as wine/proton games with sway only work on the "primary" monitor
 exec_always xrandr --output HDMI-A-2 --primary
 
 output HDMI-A-1 pos 0 0 res 1920x1080
