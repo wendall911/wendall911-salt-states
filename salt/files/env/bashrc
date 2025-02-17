@@ -24,6 +24,7 @@ alias ll='ls -lFNBph --color'
 alias d='ls -F --color | ls -d */'
 alias find='find -L'
 
+alias ssh-klaptop='ssh 10.1.10.244'
 alias ssh-tatiana='ssh 10.1.10.245'
 alias ssh-alaptop='ssh 10.1.10.246'
 alias ssh-kathy='ssh 10.1.10.175'
