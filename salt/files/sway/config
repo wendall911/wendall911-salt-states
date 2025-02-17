@@ -49,9 +49,12 @@ exec light -N 5
 
 
 {% if grains['fqdn'] == 'wdesktop.localdomain' -%}
-output HDMI-A-1 pos 1920 0 res 1920x1080
-output DP-2 pos 1920 1080 res 1920x1080
-output HDMI-A-2 pos 3840 500 res 1920x1080
+# The following line is required, as wine/proton games with sway only work on the "primary" monitor
+exec_always xrandr --output HDMI-A-2 --primary
+
+output HDMI-A-1 pos 0 0 res 1920x1080
+output DP-2 pos 0 1080 res 1920x1080
+output HDMI-A-2 pos 1920 500 res 1920x1080
 {%- endif %}
 
 ### Idle configuration
