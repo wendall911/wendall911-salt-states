@@ -146,14 +146,14 @@
 
 {% if grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
   {% for dir in 'sway', 'wlogout', 'alacritty', 'waybar', 'lan-mouse' %}
-  /home/{{ my_user }}/.config/{{ dir }}:
-    file.directory:
+/home/{{ my_user }}/.config/{{ dir }}:
+  file.directory:
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 755
+    - makedirs: True
+    - require:
       - user: {{ my_user }}
-      - group: {{ my_user }}
-      - mode: 755
-      - makedirs: True
-      - require:
-        - user: {{ my_user }}
   {% endfor %}
 {%- endif %}
 
