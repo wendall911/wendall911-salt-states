@@ -1,6 +1,6 @@
 defutf8 on
 {% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'framework.localdomain' -%}
-caption always "%{= .;#000000} %{.;#999999}%-w%{+b w}%51>%n %t%{= .;#999999}%+w%<%-=%{= .;#000000} wdesktop| %{.;#000000}20%y-%m-%d %{.;#000000}%c %{-}"
+caption always "%{= .;#000000} %{.;#999999}%-w%{+b w}%51>%n %t%{= .;#999999}%+w%<%-=%{= .;#000000} wdesktop| %{.;#000000}20%y-%m-%d %{.;#000000}%0C %{-}"
 {%- else %}
 caption always "%{= kK} %{K}%-w%{+b w}%51>%n %t%{= K}%+w%<%-=%{= kK} {{grains['host']}}| %{w}20%y-%m-%d %{w}%0c:%s %{-}"
 {%- endif %}
