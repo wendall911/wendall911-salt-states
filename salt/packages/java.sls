@@ -1,8 +1,12 @@
-java-1.8.0-openjdk:
+temurin-8-jdk:
   pkg:
     - installed
 
-java-11-openjdk:
+temurin-11-jdk:
+  pkg:
+    - installed
+
+temurin-17-jdk:
   pkg:
     - installed
 
