@@ -1,0 +1,3 @@
+code:
+  pkg:
+    - installed

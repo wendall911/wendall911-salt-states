@@ -3,6 +3,10 @@ include:
   - repos.google-chrome
   - repos.rpmfusion
   - repos.salt
+  {% if grains['fqdn'] == 'wlaptop.localdomain' -%}
+  - repos.vscode
+  - packages.vscode
+  {%- endif %}
   - users.admins
   - packages.sudo
   - packages.salt-minion
