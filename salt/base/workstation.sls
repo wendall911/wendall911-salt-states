@@ -3,7 +3,7 @@ include:
   - repos.google-chrome
   - repos.rpmfusion
   - repos.salt
-  {% if grains['fqdn'] == 'wlaptop.localdomain' -%}
+  {% if grains['fqdn'] == 'wdesktop.localdomain' -%}
   - repos.vscode
   - packages.vscode
   {%- endif %}
