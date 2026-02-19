@@ -13,6 +13,10 @@ temurin-17-jdk:
   pkg:
     - installed
 
+java-21-openjdk:
+  pkg:
+    - installed
+
 java-latest-openjdk:
   pkg:
     - installed
