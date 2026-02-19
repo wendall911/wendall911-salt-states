@@ -22,6 +22,10 @@ java-latest-openjdk-devel:
   pkg:
     - installed
 
+java-21-openjdk-devel:
+  pkg:
+    - installed
+
 java-25-openjdk-devel:
   pkg:
     - installed
