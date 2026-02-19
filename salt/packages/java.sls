@@ -1,3 +1,6 @@
+adoptium-temurin-java-repository:
+  pkg:
+    - installed
 temurin-8-jdk:
   pkg:
     - installed
