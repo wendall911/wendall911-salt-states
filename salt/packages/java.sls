@@ -16,3 +16,13 @@ temurin-17-jdk:
 java-latest-openjdk:
   pkg:
     - installed
+
+{% if grains['fqdn'][0] == 'w' or grains['fqdn'] == 'framework.localdomain' -%}
+java-latest-openjdk-devel:
+  pkg:
+    - installed
+
+java-25-openjdk-devel:
+  pkg:
+    - installed
+{%- endif %}
