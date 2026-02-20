@@ -20,23 +20,6 @@ filetype indent on
 " Turn syntax highlighting on
 syntax on
 
-" ------------------------------------------------------------------------------
-" Completion
-"   :help ins-completion
-"   http://www.vim.org/tips/tip.php?tip_id=1386
-" ------------------------------------------------------------------------------
-  set completeopt=menu,longest,preview
-
-  " When menu is visible, use <tab> to commit the selection
-  inoremap <expr> <tab> pumvisible() ? "<c-y>" : "\<c-g>u\<tab>"
-  inoremap <expr> <c-n> pumvisible() ? "<c-n>" : "\<lt>c-n>\<lt>c-r>=pumvisible() ? \"\\<lt>down>\" : \"\"\<lt>cr>"
-
-  " When menu is visible, use <cr> to commit the select, and bring up the next
-  " menu
-  inoremap <expr> <c-f> pumvisible() ? "<c-f>" : "\<lt>c-x>\<lt>c-f>\<lt>c-r>=pumvisible() ? \"\\<lt>down>\" : \"\"\<lt>cr>"
-  inoremap <expr> <cr> pumvisible() ? "<c-y><c-x><c-f><c-r>=pumvisible() ? \"\\<lt>down>\" : \"\"\<lt>cr>" : "\<c-g>u\<cr>"
-" ------------------------------------------------------------------------------
-
 " Use UTF-8 as the default buffer encoding
 set enc=utf-8
 
