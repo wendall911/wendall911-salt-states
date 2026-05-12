@@ -3,6 +3,7 @@ include:
   - repos.google-chrome
   - repos.rpmfusion
   - repos.salt
+  - repos.offline
   {% if grains['fqdn'] == 'wdesktop.localdomain' -%}
   - repos.vscode
   - packages.vscode
@@ -60,3 +61,10 @@ include:
     - mode: 755
     - makedirs: True
 {%- endif %}
+
+/var/local/repo:
+  file.directory:
+    - user: wendallc
+    - group: wendallc
+    - mode: 755
+    - makedirs: True
