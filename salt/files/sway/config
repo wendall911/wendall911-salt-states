@@ -282,6 +282,9 @@ bindsym --locked $mod+p exec send-clipboard 10.1.10.249
 bindsym --locked $mod+p exec send-clipboard 10.1.10.250
 {%- endif %}
 
+# Suspend command
+bindsym $mod+Shift+s exec swaylock -f -c 000000 && sleep 2 && systemctl suspend
+
 #
 # Status Bar:
 #
