@@ -90,9 +90,9 @@
     - mode: 644
     - template: jinja
 
-/home/{{ my_user }}/.bash_profile:
+/home/{{ my_user }}/.profile:
   file.managed:
-    - source: salt://files/env/bash_profile
+    - source: salt://files/env/profile
     - user: {{ my_user }}
     - group: {{ my_user }}
     - mode: 644
