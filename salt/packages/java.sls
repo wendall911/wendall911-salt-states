@@ -13,7 +13,7 @@ temurin-17-jdk:
   pkg:
     - installed
 
-java-21-openjdk:
+temurin-21-jdk:
   pkg:
     - installed
 
