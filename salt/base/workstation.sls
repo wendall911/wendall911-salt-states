@@ -7,6 +7,8 @@ include:
   {% if grains['fqdn'] == 'wdesktop.localdomain' -%}
   - repos.vscode
   - packages.vscode
+  - repos.claude-code
+  - packages.claude-code
   {%- endif %}
   - users.admins
   - packages.sudo
