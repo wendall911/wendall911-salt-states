@@ -1,4 +1,4 @@
-claude-code:
+claude-code-repo:
   pkgrepo.managed:
     - humanname: Claude Code
     - baseurl: https://downloads.claude.ai/claude-code/rpm/stable
