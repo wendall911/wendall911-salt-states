@@ -4,3 +4,6 @@ nodejs24:
 nodejs:
   pkg:
     - removed
+pnpm:
+  pkg:
+    - installed
