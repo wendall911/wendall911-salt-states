@@ -1,5 +1,5 @@
 local-offline-repo:
-  pkgrepo.managed:
+  pkgrepo.absent:
     - humanname: Local Offline Repository
     - baseurl: file:///var/local/repo
     - enabled: 1
