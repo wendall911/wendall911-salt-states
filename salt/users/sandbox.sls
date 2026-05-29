@@ -12,8 +12,8 @@
     - name: /var/lib/AccountsService/users/{{ my_user }}
     - makedirs: True
     - contents: |
-      [User]
-      SystemAccount=true
+        [User]
+        SystemAccount=true
     - require:
       - user: {{ my_user }}
 
