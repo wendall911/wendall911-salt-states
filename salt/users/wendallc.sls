@@ -44,13 +44,6 @@
     - require:
       - user: {{ my_user }}
 
-/home/{{ my_user }}/.vimrc:
-  file.managed:
-    - source: salt://files/env/vimrc
-    - user: {{ my_user }}
-    - group: {{ my_user }}
-    - mode: 644
-
 {% include './snippets/vim.jinja' %}
 
 /home/{{ my_user }}/.gitconfig:
@@ -109,6 +102,8 @@
     - group: {{ my_user }}
     - mode: 644
     - template: jinja
+    - context:
+      user: {{ my_user }}
 
 /home/{{ my_user }}/.local/share/systemd/user:
   file.directory:

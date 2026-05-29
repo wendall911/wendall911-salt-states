@@ -1,3 +1,10 @@
+/home/{{ my_user }}/.vimrc:
+  file.managed:
+    - source: salt://files/env/vimrc
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 644
+
 {% for dir in '/', '/ftdetect', '/syntax', '/colors', '/after', '/after/ftplugin', '/autoload', '/ftplugin', '/indent', '/compiler' %}
 /home/{{ my_user }}/.vim{{dir}}:
   file.directory:
@@ -17,5 +24,3 @@
     - group: {{ my_user }}
     - mode: 644
 {% endfor %}
-
-
