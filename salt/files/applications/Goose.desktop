@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Goose (Sandbox)
+#Exec=/usr/lib/Goose/Goose %U
+Exec=/usr/bin/waypipe ssh sandbox@localhost /usr/lib/Goose/Goose %U
+Icon=/usr/share/pixmaps/Goose.png
+Terminal=false
+Type=Application
+Categories=Development;
+MimeType=x-scheme-handler/goose;
