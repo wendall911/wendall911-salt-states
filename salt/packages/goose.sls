@@ -9,8 +9,10 @@ Goose_download:
 
 Goose:
   pkg.installed:
+    - name: Goose
     - skip_verify: true
-    - source: /tmp/Goose-{{ version }}.x86_64-vulkan.rpm
+    - sources: 
+      - Goose: /tmp/Goose-{{ version }}.x86_64-vulkan.rpm
     - require:
       - file: Goose_download
 
