@@ -1,5 +1,14 @@
+{% set version = '1.37.0-1' %}
+
+goose_download:
+  file.managed:
+    - name: /tmp/Goose-{{ version }}.x86_64-vulkan.rpm
+    - source: https://github.com/aaif-goose/goose/releases/download/v1.37.0/Goose-{{ version }}.x86_64-vulkan.rpm
+    - unless: test -f /tmp/Goose-{{ version }}.x86_64-vulkan.rpm
+
 goose:
   pkg.installed:
-    - name: goose
-    - sources:
-      - goose: https://github.com/aaif-goose/goose/releases/download/v1.37.0/Goose-1.37.0-1.x86_64-vulkan.rpm
+    - skip_verify: true
+    - source: /tmp/Goose-{{ version }}.x86_64-vulkan.rpm
+    - require:
+      - file: goose_download
