@@ -18,3 +18,10 @@ copr-keyd-repo:
     - baseurl: https://download.copr.fedorainfracloud.org/results/alternateved/keyd/fedora-$releasever-$basearch/
     - gpgkey: https://download.copr.fedorainfracloud.org/results/alternateved/keyd/pubkey.gpg
     - gpgcheck: 1
+
+copr-goose-repo:
+  pkgrepo.managed:
+    - hunanname: Copr repo with recent goose builds by r0x0d
+    - baseurl: https://download.copr.fedorainfracloud.org/results/r0x0d/goose/fedora-$releasever-$basearch/
+    - gpgkey: https://download.copr.fedorainfracloud.org/results/r0x0d/goose/pubkey.gpg
+    - gpgcheck: 1
