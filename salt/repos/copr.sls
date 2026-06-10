@@ -21,7 +21,7 @@ copr-keyd-repo:
 
 copr-goose-repo:
   pkgrepo.managed:
-    - hunanname: Copr repo with recent goose builds by r0x0d
-    - baseurl: https://download.copr.fedorainfracloud.org/results/r0x0d/goose/fedora-$releasever-$basearch/
-    - gpgkey: https://download.copr.fedorainfracloud.org/results/r0x0d/goose/pubkey.gpg
+    - hunanname: Copr repo for goose owned by @rhel-lightspeed
+    - baseurl: https://download.copr.fedorainfracloud.org/results/@rhel-lightspeed/goose/fedora-$releasever-$basearch/
+    - gpgkey: https://download.copr.fedorainfracloud.org/results/@rhel-lightspeed/goose/pubkey.gpg
     - gpgcheck: 1
