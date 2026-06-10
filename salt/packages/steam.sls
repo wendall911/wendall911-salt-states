@@ -1,3 +1,3 @@
-steam.i686:
+steam:
   pkg:
     - installed
