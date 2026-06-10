@@ -197,3 +197,30 @@
     - group: {{ my_user }}
     - mode: 644
 {%- endif %}
+
+{% if grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
+/home/{{ my_user }}/.local/share/applications/code.desktop:
+  file.managed:
+    - source: salt://files/applications/code.desktop
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 644
+{%- endif %}
+
+{% if grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
+/home/{{ my_user }}/.local/share/applications/code-url-handler.desktop:
+  file.managed:
+    - source: salt://files/applications/code-url-handler.desktop
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 644
+{%- endif %}
+
+{% if grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
+/home/{{ my_user }}/.local/share/applications/intellij-idea-community_intellij-idea-community.desktop:
+  file.managed:
+    - source: salt://files/applications/intellij-idea-community_intellij-idea-community.desktop
+    - user: {{ my_user }}
+    - group: {{ my_user }}
+    - mode: 644
+{%- endif %}

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Visual Studio Code - URL Handler (Sandbox)
+Comment=VS Code (Sandboxed) like it should be.
+GenericName=Text Editor
+#Exec=/usr/share/code/code --open-url %U
+Exec=/usr/bin/waypipe ssh sandbox@localhost /usr/share/code/code --enable-features=UseOzonePlatform --ozone-platform=wayland --open-url %U
+Icon=vscode
+Type=Application
+NoDisplay=true
+StartupNotify=true
+Categories=Utility;TextEditor;Development;IDE;
+MimeType=x-scheme-handler/vscode;
+Keywords=vscode;

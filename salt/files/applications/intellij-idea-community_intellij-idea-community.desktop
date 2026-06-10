@@ -1,0 +1,14 @@
+[Desktop Entry]
+X-SnapInstanceName=intellij-idea-community
+Version=1.0
+Type=Application
+Name=IntelliJ IDEA (Sandbox)
+Icon=/var/lib/snapd/snap/intellij-idea-community/current/bin/idea.png
+X-SnapAppName=intellij-idea-community
+#Exec=/var/lib/snapd/snap/bin/intellij-idea-community %f
+Exec=/usr/bin/waypipe ssh sandbox@localhost /var/lib/snapd/snap/bin/intellij-idea-community %f
+Comment=Sandboxed Intellij Idea. These tools are no longer trusted.
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-idea
+StartupNotify=true
