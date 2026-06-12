@@ -224,12 +224,3 @@
     - group: {{ my_user }}
     - mode: 644
 {%- endif %}
-
-{% if grains['fqdn'] == 'framework.localdomain' or grains['fqdn'] == 'wdesktop.localdomain' -%}
-/home/{{ my_user }}/.local/share/applications/Goose.desktop:
-  file.managed:
-    - source: salt://files/applications/Goose.desktop
-    - user: {{ my_user }}
-    - group: {{ my_user }}
-    - mode: 644
-{%- endif %}

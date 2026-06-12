@@ -9,7 +9,6 @@ include:
   - packages.vscode
   - repos.claude-code
   - packages.claude-code
-  - packages.goose
   {%- endif %}
   - users.admins
   - packages.sudo
