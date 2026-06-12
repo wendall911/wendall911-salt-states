@@ -1,0 +1,11 @@
+setlocal columns=80
+setlocal wrap
+setlocal linebreak
+setlocal breakat+=\ 
+setlocal showbreak=+++
+setlocal nospell
+setlocal conceallevel=0
+setlocal concealcursor=""
+setlocal nonumber
+setlocal norelativenumber
+setlocal nocursorline
