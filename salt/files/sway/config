@@ -18,14 +18,13 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | wofi --show drun -i --gtk-dark | xargs swaymsg exec --
+set $menu fuzzel -b 242424ff -t ffffffff -s 3584e4ff -S ffffffff -m 8be9fdff -M ffffffff -C 1b1b1bff
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg ~/.config/sway/background.jpg fill
 
-exec gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 #
 # Example configuration:
 #

@@ -14,7 +14,7 @@ pamixer:
   pkg:
     - installed
 
-wofi:
+fuzzel:
   pkg:
     - installed
 
