@@ -20,6 +20,10 @@ set $term alacritty
 # on the original workspace that the command was run on.
 set $menu fuzzel -b 242424ff -t ffffffff -s 3584e4ff -S ffffffff -m 8be9fdff -M ffffffff -C 1b1b1bff
 
+exec gsettings set org.gnome.desktop.interface gtk-enable-primary-paste true
+exec gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
+exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
