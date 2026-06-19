@@ -14,6 +14,8 @@ if [ "x$XDG_SESSION_TYPE" = "xwayland" ] &&
 fi
 
 export SWAY_STARTUP="$XDG_RUNTIME_DIR/sway-startup.$$.pipe"
+export GTK_USE_PORTAL=0
+export GTK_THEME=Adwaita:dark
 mkfifo "$SWAY_STARTUP"
 exec /usr/bin/sway
 read display wayland_display <"$SWAY_STARTUP"
