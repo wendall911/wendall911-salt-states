@@ -6,8 +6,9 @@
     - fullname: {{ my_fullname }}
     - shell: /bin/bash
     - home: /home/{{ my_user }}
-    - optional_groups:
+    - groups:
       - wheel
+    - optional_groups:
       - repousers
 
 /home/{{ my_user }}/.ssh:
