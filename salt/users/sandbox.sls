@@ -7,7 +7,7 @@
     - shell: /bin/bash
     - home: /home/{{ my_user }}
     - groups:
-      repousers
+      - repousers
     - require:
       - group: repousers
 
