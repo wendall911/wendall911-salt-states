@@ -1,0 +1,25 @@
+/*
+ * All builds for any untrusted IDE (which is all IDEs) run under a sandbox account.
+ * Builds are untrusted by default. Pimary use for builds is hinting and decomp sources.
+ */
+allprojects { project ->
+    // Detect if the build is running inside IntelliJ
+    def isIntelliJ = System.getProperty("idea.active") == "true" || System.getProperty("idea.sync.active") == "true"
+    
+    // Detect if the build is running inside VS Code's Java tools
+    def isVSCode = System.getProperty("eclipse.application") != null || System.getenv("VSCODE_PID") != null
+    
+    if (isIntelliJ || isVSCode) {
+        // Dynamically shift the build directory for either IDE
+        project.layout.buildDirectory.set(project.file("${project.buildDir}-ide"))
+        
+        // Ensure standard IDE plugins follow the new isolated path
+        plugins.withId('idea') {
+            idea.module {
+                inheritOutputDirs = false
+                outputDir = project.file("${project.buildDir}-ide/classes/java/main")
+                testOutputDir = project.file("${project.buildDir}-ide/classes/java/test")
+            }
+        }
+    }
+}

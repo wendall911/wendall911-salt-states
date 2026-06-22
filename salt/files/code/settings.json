@@ -1,0 +1,70 @@
+{
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "svelte.enable-ts-plugin": true,
+    "claudeCode.preferredLocation": "panel",
+    "git.openRepositoryInParentFolders": "never",
+    "chat.viewSessions.orientation": "stacked",
+    "vim.vimerc.enable": true,
+    "vim.vimerc.path": "~/.vimrc",
+    "redhat.telemetry.enabled": false,
+    "workbench.editor.enablePreview": false,
+    "editor.semanticHighlighting.enabled": false,
+    "editor.bracketPairColorization.enabled": false,
+    "editor.guides.bracketPairsHorizontal": false,
+    "editor.guides.highlightActiveBracketPair": false,
+    "editor.tokenColorCustomizations": {
+        "textComponents": "#e0e0e0",
+        "keywords": "#F7C585",
+        "functions": "#e0e0e0",
+        "variables": "#e0e0e0",
+        "types": "#e0e0e0",
+        "strings": "#BA74AD",
+        "numbers": "#BA74AD",
+        "comments": "#8FCDBE",
+        "textMateRules": [
+            {
+                "scope": [
+                    "variable",
+                    "variable.parameter",
+                    "variable.other",
+                    "variable.other.property",
+                    "variable.other.object.property",
+                    "support.variable",
+                    "entity.name.variable",
+                    "entity.other.inherited-class",
+                    "storage.type.generic.java"
+                ],
+                "settings": {
+                    "foreground": "#e0e0e0"
+                }
+            },
+            {
+                "scope": [
+                    "keyword.control.import",
+                    "keyword.other.import.java",
+                    "storage.type.annotation.java",
+                    "keyword.other.package.java"
+                ],
+                "settings": {
+                    "foreground": "#51B1D1"
+                }
+            },
+            {
+                "scope": [
+                    "constant.language.java"
+                ],
+                "settings": {
+                    "foreground": "#BA74AD"
+                }
+            },
+            {
+                "scope": [
+                    "keyword.operator.instanceof"
+                ],
+                "settings": {
+                    "foreground": "#F7C585"
+                }
+            }
+        ]
+    }
+}
