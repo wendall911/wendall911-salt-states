@@ -6,6 +6,10 @@
     - fullname: {{ my_fullname }}
     - shell: /bin/bash
     - home: /home/{{ my_user }}
+    - groups:
+      repousers
+    - require:
+      - group: repousers
 
 {{ my_user }}_gdm_mask:
   file.managed:
@@ -82,9 +86,6 @@
 
 repousers:
   group.present
-    - addusers:
-      - wendallc
-      - sandbox
 
 devrepo_permissions:
   file.directory:
